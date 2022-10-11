@@ -1,5 +1,11 @@
 # Követelményspecifikáció
 
+## 1. Vezetői összefoglaló
+
+A mai, két számjegyű inflációval terhelt világunkban mindenkinek szüksége van arra, hogy kövesse a költségeit, tervezhetőek legyenek a kiadásai, ehhez nyújt segítséget új programunk, a spendor, ami egy költségkövető/nyilvántartó webalkalmazás.
+Vállalkozásunk ezzel azt a célt tűzte ki maga elé, hogy a szoftverünk használatával az embereknek pénzt spóroljunk azáltal, hogy görbe tükröt tartunk eléjük, egy helyre gyűjtve, különböző kategóriák szerint csoportosíva szembesítjük őket a költségtételeikkel, így ezek elemzését követően a nélkülözhető, felesleges, pénznyelő kiadások kiszűrhetőek.
+Feladatunk tárgya egy fenti, hasznos alkalmazás fejlesztése.
+
 ## 2. Jelenlegi helyzet
 
 A vagyonunkat, mely lehet készpénz, és számlapénz is, fizikailag és virtuálisan is több különböző helyen tartjuk egy időben, úgy mint a pénztárcánkban, az otthoni “párnacihában”, a bankszámlánkon, a megtakarítási számlánkon, esetleg befektetéseinkben (ingatlan, arany, nyersanyag, részvény, kötvény/állampapír), majd ezen különböző forrásokból költünk is. 
