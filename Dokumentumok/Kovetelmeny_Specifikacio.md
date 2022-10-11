@@ -1,5 +1,10 @@
 # Követelményspecifikáció
 
+## 2. Jelenlegi helyzet
+
+A vagyonunkat, mely lehet készpénz, és számlapénz is, fizikailag és virtuálisan is több különböző helyen tartjuk egy időben, úgy mint a pénztárcánkban, az otthoni “párnacihában”, a bankszámlánkon, a megtakarítási számlánkon, esetleg befektetéseinkben (ingatlan, arany, nyersanyag, részvény, kötvény/állampapír), majd ezen különböző forrásokból költünk is. 
+Az így elaprózódó kiadásainkat nem érezzük annyira fájdalmasnak, mert nem látjuk egyszerre a nagyobb összeg eltűnését, ill. nem látjuk rendszerszinten a kiadásainkban a tendenciát, így nem vagyunk képesek változtatni a rossz, helytelen, vagy nem hatékony költési szokásainkon, azonban a világban történő változások miatt szükséges folyamatosan adaptálódni az életvitelünkkel. 
+
 ## 3. Vágyálomrendszer leírása
 A cél a jelenleg különböző digitális formákban csak részben létező (bankkártyához tartozó vásárlási tranzakciók, ill. különböző számlák havi számlaértesítői), nagyrészt fejben tartott kiadások (vásárlás készpénzzel a mai napig a társadalom nagy részének napi tevékenység) egy helyen, kategóriák szerint rendszerezett, egyszerű és gyors rögzítése, listázása. És ezen  adatokból statisztikák, kimutatások, elemzések készítése.
 A kifejlesztésre kerülő informatikai rendszerben meg kell oldalni a kiadások különöző tulajdonságaiban történő keresését is.
