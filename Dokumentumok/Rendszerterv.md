@@ -3,6 +3,54 @@
 ## 1. A rendszer célja
 A rendszer célja, hogy a felhasználók képesek legyenek gyorsan és kényelmesen rögzíteni kiadásaikat, ezáltal nyomon követve azokat. A rendszernek nem célja a bevételek figyelése, így kizárólag a kiadásokról ad tájékoztatást.
 
+### 3.2 Üzleti folyamatok
+Üzleti folyamatok a felhasználók számára:
+
+**Felhasználói adatok megjelenítése**
+
+| Megnevezés                 |
+| -------------------------- |
+| A felhasználó neve         |
+| A felhasználó jelszava     |
+| A felhasználó email címe   |
+| A felhasználó telefonszáma |
+
+**Tételek megjelenítése és szűrése**
+
+| Megnevezés                       |
+| -------------------------------- |
+| A tétel szűrése ettől a dátumtól |
+| A tétel szűrése eddig a dátumig  |
+| A tétel megnevezése              |
+| Kategória megnevezése            |
+| A tétel összege                  |
+| A tétel létrehozásának dátuma    |
+
+**Új tétel rögzítése**
+
+| Megnevezés                    |
+| ----------------------------- |
+| Kategória megnevezése         |
+| A tétel megnevezése           |
+| A tétel összege               |
+| A tétel létrehozásának dátuma |
+
+**Meglévő tételek módosítása vagy törlése**
+
+| Megnevezés                    |
+| ----------------------------- |
+| A tétel megnevezése           |
+| Kategória megnevezése         |
+| A tétel összege               |
+| A tétel létrehozásának dátuma |
+
+### 3.3 Üzleti entitások
+
+| Entitások |
+| --------- |
+| Tétel     |
+| Kategória |
+
 ## 6. Fizikai környezet
 ###### Vásárolt softwarekomponensek és külső rendszerek
 Nincsenek vásárolt szoftverkomponensek.
