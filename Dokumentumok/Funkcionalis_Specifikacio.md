@@ -13,4 +13,4 @@
 ###### Módosítás
 ![Modositas](PNG/kepoernyoterv_modosit.png)
 ###### Új tétel
-![UjTetel](PNG/kepernyoterv_ujtetel.png)
+![UjTetel](PNG/kepoernyoterv_ujtetel.png)
