@@ -70,7 +70,10 @@ A böngésző rendszerkövetelményeinek megfelelő kliens
 Apache NetBeans, HTML, CSS, PHP, MySQL Workbench
 
 ## 8. Architekturális terv
-A projekt Model-View-Controller vagyis MVC mintában fog készülni.
+A Backend PHP programozási nyelven készül OOP alapokon. A készítés során az MVC (model-view-controller) programtervezési minta érvényesül.
+
+A Frontend HTML, CSS, Javascript és PHP programozási nyelveken készül.
+A weboldal felépítése elkülönül Header (fejléc), Navigation (navigáció), Content (tartalom) és Footer (lábléc) szegmensekre. 
 ###### Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
 A felhasználó webböngészőn, HTML oldalakon keresztül tud navigalni. A CRUD műveletek HTTP GET és POST metódus formájában kerülnek átadásra szerver-kliens és kliens-szerver relációban, amiket aztán MySQL adatbázisban írunk és olvasunk. 
 A weboldal egy Apache webszerveren fut.
@@ -80,7 +83,8 @@ A változások a szerver oldalon történnek, ezért a kliens oldalon a felhaszn
 A rendszer bővíthető több szervergép csatlakoztatása esetén.
 Vékony kliens oldalon nincs szükség beavatkozásra.
 ###### Biztonsági funkciók
-CSRF token (cross-site request forgery) implementálása. 
+CSRF TOKEN (cross-site request forgery) implementálása.
+Bejelentkezés során a hitelesítés után a szerver készít kriptográfiai algoritmussal egy egyedi TOKEN-t, melyet elment a PHP seassion-ben. Amikor a felhasználó a kliens oldalon védett tartalmat kíván megtekinteni, a PHP ellenőrizni fogja a TOKEN jelenlétét, hitelességét. Ez garantálja, hogy a kérés a weboldalon keresztük, a kliens böngészőjében történik.
 
 ## 10. Implementációs terv
 A felhasználó webböngészőn keresztül éri el a vékony klienst, vagyis a weboldalakat. Ezek a weboldalak HTML, CSS, JavaScript programozási nyelvekben készülnek. Az adatokat MySQL adatbázis szerveren tárolódnak, melyet az üzleti logika rétegében futó PHP program kapcsol össze a GUI felülettel.
