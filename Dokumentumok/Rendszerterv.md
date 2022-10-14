@@ -106,3 +106,9 @@ HTML, CSS, JavaScript
 ### 12.2. Kliens oldalon
 Tetszőleges webkliens software telepítése
 Internethozzáférés
+
+## 13. Karbantartási terv
+- Átfogó tesztelések 1-1 nagyobb webböngésző verzióváltása esetén.
+- Felhasználói panaszok kivizsgálása. 
+- A rendszer üzemeltetői igényeinek kielégítése, új funkciók implementálása.
+- Időszakos adatbázis karbantartás, biztonsági mentések.
