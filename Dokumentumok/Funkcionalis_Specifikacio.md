@@ -3,7 +3,7 @@
 ## 10. Képernyő tervek
 
 ###### Bejelentkezés
-![Bejelentkezes](Dokumentumok\PNG\kepernyoterv_bejelentkezes.png)
+![Bejelentkezes](/PNG/kepernyoterv_bejelentkezes.png)
 ###### Regisztráció
 ![Regisztracio](Dokumentumok\PNG\kepoernyoterv_regisztracio.png)
 ###### Főoldal
