@@ -39,9 +39,9 @@ HTML, CSS, JavaScript
 1. Windows, Linux vagy macOS operációs rendszer telepítése
 2. Hálózati, Internet beállítások
 3. MySQL telepítés, konfigurálás: 
-- Alapértelmezett 3306-os port használata
-- Jogosultságok beállítása
-- Táblák feltöltése
+    - Alapértelmezett 3306-os port használata
+    - Jogosultságok beállítása
+    - Táblák feltöltése
 4. PHP telepítés, konfigurálás
 5. Apache webszerver telepítés, konfigurálás
 6. Tűzfal beállítások
