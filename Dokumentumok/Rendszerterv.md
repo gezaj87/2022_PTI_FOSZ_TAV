@@ -1,5 +1,8 @@
 # Rendszerterv
 
+## 1. A rendszer célja
+A rendszer célja, hogy a felhasználók képesek legyenek gyorsan és kényelmesen rögzíteni kiadásaikat, ezáltal nyomon követve azokat. A rendszernek nem célja a bevételek figyelése, így kizárólag a kiadásokról ad tájékoztatást.
+
 ## 6. Fizikai környezet
 ###### Vásárolt softwarekomponensek és külső rendszerek
 Nincsenek vásárolt szoftverkomponensek.
