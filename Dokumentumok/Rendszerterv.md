@@ -58,16 +58,19 @@ A bejelentkezés minden felhasználó számára egységesen a következő: A fő
 | Kategória |
 
 ## 6. Fizikai környezet
-###### Vásárolt softwarekomponensek és külső rendszerek
-Nincsenek vásárolt szoftverkomponensek.
-###### Hardver és hálózati topológia
-Az alkalmazás webplatformra készül.
-###### Fizikai alrendszerek
+### Vásárolt softwarekomponensek és külső rendszerek
+- Nincsenek vásárolt szoftverkomponensek.
+- Ingyenes szoftverkomponensek:
+    - Bootstrap CSS framework
+    - Chart.js javascript library diagram készítéshez 
+### Hardver és hálózati topológia
+Az alkalmazás webplatformra készül. Bármely operációs rendszerrel kompatibilis.
+### Fizikai alrendszerek
 Webszerver: 80-as porton elérhető HTTP szolgáltatás
 MySQL adatbázis szerver.
 A böngésző rendszerkövetelményeinek megfelelő kliens
-###### Fejlesztő eszközök
-Apache NetBeans, HTML, CSS, PHP, MySQL Workbench
+### Fejlesztő eszközök
+Visual Studio Code, Apache NetBeans, MySQL Workbench, Github
 
 ## 8. Architekturális terv
 A Backend PHP programozási nyelven készül OOP alapokon. A készítés során az MVC (model-view-controller) programtervezési minta érvényesül.
