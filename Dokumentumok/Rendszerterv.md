@@ -5,7 +5,7 @@ Nincsenek vásárolt szoftverkomponensek.
 Az alkalmazás webplatformra készül.
 ###### Fizikai alrendszerek
 Webszerver: 80-as porton elérhető HTTP szolgáltatás
-MySQL adatbázis szerver
+MySQL adatbázis szerver.
 A böngésző rendszerkövetelményeinek megfelelő kliens
 ###### Fejlesztő eszközök
 Apache NetBeans, HTML, CSS, PHP, MySQL Workbench
@@ -22,3 +22,12 @@ A rendszer bővíthető több szervergép csatlakoztatása esetén.
 Vékony kliens oldalon nincs szükség beavatkozásra.
 ###### Biztonsági funkciók
 CSRF token (cross-site request forgery) implementálása. 
+
+## 10. Implementációs terv
+A felhasználó webböngészőn keresztül éri el a vékony klienst, vagyis a weboldalakat. Ezek a weboldalak HTML, CSS, JavaScript programozási nyelvekben készülnek. Az adatokat MySQL adatbázis szerveren tárolódnak, melyet az üzleti logika rétegében futó PHP program kapcsol össze a GUI felülettel.
+###### Perzisztencia (adatbázis osztály)
+MySQL adatbázis szerver
+###### Üzleti logika osztályai
+Webszerveren futó PHP program
+###### Kliens oldal osztályai
+HTML, CSS, JavaScript
