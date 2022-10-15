@@ -98,6 +98,138 @@ Webszerveren futó PHP program
 ###### Kliens oldal osztályai
 HTML, CSS, JavaScript
 
+## 11. Tesztterv
+
+A tesztterv célja, hogy a tesztelőknek iránymutatást adjon azokról a lépésekről, amik ahhoz szükségesek, hogy megbizonyosodjanak a fejlesztők arról, hogy a szoftver teljességét adó komponensek külön-külön és egy egységként is az üzleti folyamatoknak megfelelően működik.
+
+Jelen esetben a szoftvert tesztelők egyben a fejlesztők is.
+
+### 11.1 Unit-teszt:
+
+A fejlesztés és a programkód változások során szükséges a metódusokat és funkciókat tesztelni. Ezeket a teszteléseket a fejlesztés első néhány szakaszában a programkódba beégetett adatokkal tudja elvégezni. Ellenőrizni kell, hogy a fejlesztés során megírt kódok megfelelnek-e az üzleti folyamatoknak és a funkcionális követelményeknek.
+
+### 11.2 A rendszerbe lépés tesztelése:
+
+Amikor a rendszerhez hozzákapcsolunk egy új komponenst, akkor meg kell győződni, hogy minden az igényeknek megfelelően működik. Az adatok áramlásának követése több komponens között. 
+
+### 11.3 Biztonsági teszt:
+
+Az adatokhoz csak az adott bejelentkezett felhasználó fér hozzá, olvasásra és írásra. Illetéktelenek és a nem bejelentkezett felhasználok ne tudják módosítani az adatbázist.
+
+### 11.4 GUI tesztelése:
+
+Meg kell győződni arról, hogy a felhasználói felület megfelel-e a képernyőterveknek. Ha megfelel, akkor ezt a felületet be kell mutatni a megrendelőnek, a projekt menedzsernek vagy a tulajdonosnak. Ha van a felhasználói felületben igény változás, akkor ahhoz kell igazítani és dokumentálni. A módosítás lefejlesztése után újra be kell mutatni.
+
+### 11.5 Általános felhasználóként való tesztelés:
+
+Admin jogosultság nélküli felhasználó szimulálása, annak érdekében, hogy a végfelhasználók szemszögéből lássák a program működését a tesztelők, most a fejlesztők is.
+
+#### 11.5.1 Bejelentkezési felület:
+A felhasználó be tud-e jelentkezni.
+###### Mezők:
+E-mail cím: e-mail típus.Kötelező kitölteni.
+Kötelező kitölteni.
+Jelszó: password típus. Kötelező kitölteni.
+
+Regisztrációs felület:
+###### Mezők:
+E-mail cím: e-mail típus.Kötelező kitölteni.
+Jelszó: password típus. Kötelező kitölteni.
+Jelszó újra: password típus és meg kell egyeznie a Jelszó mező értékkel.  Kötelező kitölteni.
+Telefonszám: tel típus.  Kötelező kitölteni.
+ 
+
+#### 11.5.2 Főoldal:
+
+###### Navigáció:
+Új tétel hozzáadása: átirányítás az ujtetel.html-re.
+Tételek megtekintése: átirányítás a tetelek.html-re.
+Kijelentkezés: Kijelentkezteti a felhasználót.
+Grafikon helyes működésének ellenőrzése.
+
+###### Mezők és lapozó:
+Dátum-tól: Dátum típus. Nem kötelező a kitöltés
+Dátum-ig: Dátum típus. Nem kötelező a kitöltés
+Lapozási funkció működése.
+
+#### 11.5.3 Új tétel hozzáadása:
+
+###### Navigáció:
+Főoldal: átirányítás a fooldal.html-re
+Tételek megtekintése: átirányítás a tetelek.html-re
+Kijelentkezés: Kijelentkezteti a felhasználót.
+
+###### Mezők:
+Kategória: Az adatbázisban szereplő kategóriák. Dropbox típus. Kötelező kitölteni.
+Megnevezés: Speciális karakter nem elfogadott. Text típus. Kötelező kitölteni.
+Összeg Ft-ban: Number típus, vagyis csak a számok elfogadottak. Kötelező kitölteni.
+Dátum: Dátum típus. A tételhez tartozó időpontot kell rögzíteni. Kötelező kitölteni.
+
+###### Gombok:
+Rögzítés: Rögzíti a tételt.
+Törlés: Kitörli az eddig kitöltött mezőket.
+
+#### 11.5.4 Tételek megtekintése:
+
+###### Navigáció:
+Főoldal: átirányítás a fooldal.html-re
+Új tétel hozzáadása: átirányítás az ujtetel.html-re
+Kijelentkezés: Kijelentkezteti a felhasználót.
+
+###### Műveletek és lapozó:
+Módosítás: átirányítás a modosit.html-re.
+Törlés: Kitörli az adott tételt.
+Lapozási funkció működése.
+ 
+
+#### 11.5.5 Tétel módosítása:
+
+###### Navigáció:
+Főoldal: átirányítás a fooldal.html-re
+Tételek megtekintése: átirányítás a tetelek.html-re
+Kijelentkezés: Kijelentkezteti a felhasználót.
+
+###### Mezők:
+Kategória: Az adatbázisban szereplő kategóriák. Dropbox típus. Kötelező kitölteni.
+Megnevezés: Speciális karakter nem elfogadott. Text típus. Kötelező kitölteni.
+Összeg Ft-ban: Number típus, vagyis csak a számok elfogadottak. Kötelező kitölteni.
+Dátum: Dátum típus. A tételhez tartozó időpontot kell rögzíteni. Kötelező kitölteni.
+
+###### Gombok:
+Módosítás: Módosítja az adatbázisban meglévő adatokat, az új bevitt adatokra.
+Mégse: Visszairányít a tetelek.html-re.	
+
+### 11.6 Határidők:
+
+| Megnevezés  | Komment |  Határidő     |
+| ------------- | ------------- | ------------- |
+| Unit-teszt  | Fejlesztés alatt folyamatosan  | 2022.11.05  |
+| GUI tesztelése  | Fejlesztés alatt folyamatosan  | 2022.11.05  |
+| A rendszerbe lépés tesztelése | Fejlesztés alatt folyamatosan  | 2022.11.10  |
+| Biztonsági teszt  | Funkció implementálása után | 2022.11.07  |
+| Általános felhasználóként való tesztelés  | Összes implementált komponens után  | 2022.11.22  |
+| Végső tesztelés  | Átadás előtti pillanat  | 2022.12.05  |
+
+
+
+### 11.7 Jegyzőkönyv:
+
+|Megnevezés	|Tesztelő neve	|Funkció leírása	|Elvárt eredmény	|Eredmény|	Megfelelősségi státusz|
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+|Unit-teszt     |               |               |               |               |               |					
+|Unit-teszt     |               |               |               |               |               |					
+|GUI tesztelése |				|               |               |               |               |
+|GUI tesztelése |				|               |               |               |               |					
+|A rendszerbe lépés tesztelése	|				|               |               |               |	|
+|A rendszerbe lépés tesztelése	|				|               |               |               |	|					
+|Biztonsági teszt               |				|               |               |               |   |
+|Általános felhasználóként való tesztelés|		|               |               |               |   |			
+|Általános felhasználóként való tesztelés|		|               |               |               |   |
+|Végső tesztelés|               |               |               |               |               |				
+
+
+
+
 ## 12. Telepítési terv
 ### 12.1. Szerver oldalon
 1. Windows, Linux vagy macOS operációs rendszer telepítése
