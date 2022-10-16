@@ -52,3 +52,14 @@ Vásárlási hely, szolgáltatást nyújtó, pénzt elfogadó
 -	megtekintés - kategóriánként: Amennyiben esetlegesen kategóriánként szeretnénk megtekinteni a költéseinket, mindenképpen szükséges a “kockás” füzethez folyamodni, ami nem túl effektív, sérülékeny, egyszerre csak egyvalaki vezetheti benne a költéseit, hamar áttekinthetetlen tud lenni, statisztikát készíteni is sok idő az információiból.
 -	Keresés – egy bizonyos tétel keresése: Vagy a kockás füzetet szükséges fellapozni, vagy az összegyűjtött nyugtákat “átnyálazni”, digitális lenyomat esetén pedig több különböző helyen ellenőrizni, hogy a költés szerepel-e az adott listában. 
 -	Törlés - tétel törlése: amennyiben 14 napon belüli elállási jogunkkal élünk, vagy garanciális problémák miatt kapunk visszatérítést a kockás füzetben satírozás/radírozás szükséges, amivel a havi ill. kategóriánkénti összeg is megváltozik, ezáltal több helyen kell javítani, újraszámolni. Digitális számlakivonat esetében pedig szükséges észben tartanunk, vagy kinyomtatnunk, és úgy javítanunk, ami idő, pénz és energia.
+
+## 6. Igényelt üzleti folyamatok modellje
+
+###### Online folyamatok a felhasználók számára:
+- Bejelentkezés: bejelentkezés menü => e-mail cím és jelszó megadása => bejelentkezési oldal megjelenése
+- Személyes adatok módosítása: regisztrált felhasználói jogosultsággal belépés => profil menü => adatok módosítása menüpont => adat módosítása => megerősítés.
+- Új tétel hozzáadása: felhasználói jogosultsággal belépés => új tétel hozzáadása menüpont => adatok megadása => rögzítés gombbal véglegesítés.
+- Tétel módosítása: felhasználói jogosultsággal belépés => tételek megtekintése menüpont => módosítás művelet kiválasztása => adatok megadása => véglegesítés.
+- Tétel törlése: felhasználói jogosultsággal belépés => tételek listázása menüpont => törlés művelet kiválasztása => véglegesítés.
+- Tételek megtekintése: felhasználói jogosultsággal belépés => tételek megtekintése menüpont.
+- Dátum szűrő: felhasználó a dátum mezőkbe beírja a keresett időszakot =>  Az adott időszakban lévő tételek megjelenítése
