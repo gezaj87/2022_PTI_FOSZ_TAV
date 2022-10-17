@@ -1,6 +1,7 @@
 # Funkcionális Specifikáció
 
 ## 1. A rendszer céljai és nem céljai
+
 A fejlesztés célja egy költésmenedzsementet megvalósító rendszer készítése magánszemély felhasználók, tehát akár saját magunk részére, mely segítik átlátni költéseinket azáltal, hogy az összes költésünk fel tudjuk rögzíteni egy adatbázisba különböző ismérvek, tulajdonságok szerint, majd ezen listát mindezek, ill. időrend alapján fel tudjuk dolgozni, szűrni.
 Annak érdekében, hogy a felhasználónak minél könnyebb legyen az átállás ezen digitális költségkövetésre, hasonlóan felhasználóbarátként, és gyorsan kell működnie a megvalósított informatikai rendszerünknek, mintha még mindig a “kockás füzetbe” vezetné a költségeit, Ill. már persze rengeteg banki alkalmazás próbál segíteni ebben.
 Már az is haladás, visszaolvassuk, mikor, mire, mennyit költöttünk, mivel minden hónapban iszonyatosan sok apró pénzügyi tranzakciónk van, melyeket képtelenség észben tartani.
