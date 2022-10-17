@@ -7,7 +7,7 @@ A rendszer célja, hogy a felhasználók képesek legyenek gyorsan és kényelme
 A rendszert nem lehet regisztrálás nélkül használni. A látogató a kezdőoldalt képes elérni és azon keresztül bejelentkezni, vagy regisztrálni a rendszerbe. A bejelentkezett felhasználó képes új tételeket hozzáadni a meglévőköz, vagy a meglévőket lekérdezni, valamint dátum szerint szűrni azokat.
 
 ### 3.1 Üzleti szereplők
-A bejelentkezés minden felhasználó számára egységesen a következő: A főoldalra lépve megjelenik a ’Felhasználónév’ és ’Jelszó’ beviteli űrlap. A mezők kitöltése után a ’Belépés’ gombra kattintva tud bejelentkezni a felhasználó. Ha az azonosítás sikeres, akkor a felhasználó belépett és megjelenik a jogosultságának megfelelő felület. Ha sikertelen az azonosítás, hibaüzenet jelenik meg.
+A bejelentkezés minden felhasználó számára egységesen a következő: A főoldalra lépve megjelenik a ’Email’ és ’Jelszó’ beviteli űrlap. A mezők kitöltése után a ’Belépés’ gombra kattintva tud bejelentkezni a felhasználó. Ha az azonosítás sikeres, akkor a felhasználó belépett és megjelenik a jogosultságának megfelelő felület. Ha sikertelen az azonosítás, hibaüzenet jelenik meg.
 
 ### 3.2 Üzleti folyamatok
 Üzleti folyamatok a felhasználók számára:
