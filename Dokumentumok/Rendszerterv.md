@@ -3,6 +3,66 @@
 ## 1. A rendszer célja
 A rendszer célja, hogy a felhasználók képesek legyenek gyorsan és kényelmesen rögzíteni kiadásaikat, ezáltal nyomon követve azokat. A rendszernek nem célja a bevételek figyelése, így kizárólag a kiadásokról ad tájékoztatást.
 
+## 2. Projekt terv
+
+### 2. 1 Projektszerepkörök, felelősségek
+A rendszer létrehozásához rendelkezésre álló erőforrások kezelése a GitHub felületen történik. Az alpontokban találhatóak a projektmunkások és felelősségeik, valamint az ütemterv és mérföldkövek.
+
+### 2.2 Projektmunkások és felelősségeik
+
+**Frontend:**
+| Projektmunkások |
+| --------------- |
+| Orosz Norbert   |
+| Poglár Gábor    |
+
+| Felelősségek                                    |
+| ----------------------------------------------- |
+| Kliensoldali ellenőrzések kialakítása           |
+| Felhasználók által elérhető felület kialakítása |
+
+**Backend:**
+| Projektmunkások |
+| --------------- |
+| Jóni Géza       |
+| Tóth Levente    |
+
+| Felelősségek                       |
+| ---------------------------------- |
+| Backend szolgáltatások kialakítása |
+| Adatbázis szerkezetek kialakítása  |
+
+**Tesztelés:**
+| Projektmunkások |
+| --------------- |
+| Poglár Gábor    |
+| Orosz Norbert   |
+| Tóth Levente    |
+| Jóni Géza       |
+
+| Felelősségek                                         |
+| ---------------------------------------------------- |
+| A szoftverekben meglévő esetleges hibák felderítése. |
+
+### 2.3 Ütemterv
+| Funkció                   | Feladat                                    |
+| ------------------------- | ------------------------------------------ |
+| Követelmény specifikáció  | Követelmény specifikáció elkészítése       |
+| Funkcionális specifikáció | Funkcionális specifikáció elkészítése      |
+| Rendszerterv              | Rendszerterv és képernyőtervek elkészítése |
+| Adattárolás               | Adatmodell megtervezése                    |
+| Adattárolás               | Adatbázis megvalósítása                    |
+| Honlap                    | Backend és frontend megvalósítása          |
+| Honlap                    | Backend frontend összekapcsolása           |
+| Honlap                    | Rendszer tesztelése                        |
+
+### 2.4 Mérföldkövek
+| Időpont    | Mérföldkő                                |
+| ---------- | ---------------------------------------- |
+| 2022.09.18 | Projektmunkák és felelősségeik kiosztása |
+| 2022.11.18 | Projekt prototipus bemutatása            |
+| 2022.11.30 | Elkészült projekt átadása                |
+
 ## 3. Üzleti folyamatok modellje
 A rendszert nem lehet regisztrálás nélkül használni. A látogató a kezdőoldalt képes elérni és azon keresztül bejelentkezni, vagy regisztrálni a rendszerbe. A bejelentkezett felhasználó képes új tételeket hozzáadni a meglévőköz, vagy a meglévőket lekérdezni, valamint dátum szerint szűrni azokat.
 
