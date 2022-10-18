@@ -118,6 +118,12 @@ A bejelentkezés minden felhasználó számára egységesen a következő: A fő
 | Kategória |
 
 ## 6. Fizikai környezet
+
+### Platformok
+- PHP 8.1
+- MySQL 8.0
+- JavaScript 1.5
+- HTML 5
 ### Vásárolt softwarekomponensek és külső rendszerek
 - Nincsenek vásárolt szoftverkomponensek.
 - Ingyenes szoftverkomponensek:
