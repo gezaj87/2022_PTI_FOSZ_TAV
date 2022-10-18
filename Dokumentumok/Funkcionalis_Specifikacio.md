@@ -19,6 +19,52 @@ A mai piaci helyzetben úgy érezhetjük, hogy folyik ki a kezeink közül a pé
 
 A jelenlegi helyzetben vázoltak miatt azt a lehetőséget látjuk, hogy olyan embereknek is tudunk segíteni, akiknek nem anyagi segítségre van szüksége, hanem a saját anyagi helyzetének a karbantartására van igénye. Ennek a segítsége érdekében különböző grafikai megjelenítés kell, hogy könnyen látható legyen kategóriánként, hogy az egyén megismerje önmagát, a vásárlási szokásait, és lehetőleg abba az irányba terelni, hogy ezeket a szokásokat változtassa meg a tudatos vásárló irányába.
 
+## 8. Használati esetek [Use cases]
+### 8.1. Szereplők
+	- Felhasználó
+	- Adminisztrátor
+
+### 8.2. Felhasználó használati esetei
+#### Regisztráció
+A felhasználó regisztrál a honlapon. A regisztráció során megadja az e-mail címét (mely később azonosítóként fog szolgálni), nevét, nemét, korát, választott jelszavát és telefonszámát.
+A telefonszám megadása opcionális.
+A szolgáltatás feltétele a regisztráció.
+#### Bejelentkezés
+A felhasználó a regisztrációt követően bejelentkezik, és megkezdi a program használatát. Az azonosításhoz meg kell adni azt az e-mail cím és jelszó párost, amellyel regisztrált a rendszerbe.
+#### Adatmódosítás
+A regisztráció során megadott adatok módosítása.
+#### Regisztráció törlése
+Regisztráció és személyes adatok végleges törlése.
+#### Költés hozzáadás
+A felhasználó hozzáadja az adatbázishoz a pénzköltés adatait:
+- kategória
+- megnevezés
+- összeg
+- dátum
+#### Költés módosítása
+Korábban hozzáadott tétel utólagos módosítása.
+#### Költés törlése
+Korábban hozzáadott tétel törlése.
+#### Statisztikák, diagrammok megtekintése
+A felhasználónak lehetősége van megtekinteni egy adott időintervallumban a kiadásait táblázatos formában, diagrammokkal kiegészítve.
+	
+### 8.3. Adminisztrátor használati esetei
+#### Bejelentkezés
+Az adminisztrátor bejelentkezik a számára kialakított felületre. Az azonosításhoz meg kell adnia az email címét és jelszavát amit a telepítőtől kapott.
+#### Adminisztrátor hozzáadás
+Az adminisztrátornak lehetősége van más adminisztrátorokat hozzáadni a rendszerhez.
+#### Adminisztrátor törlése
+Az adminisztrátor törölheti más adminisztrátor hozzáférését.
+#### Jelszómódosítás
+Az adminisztrátor módosíthatja saját jelszavát.
+#### Felhasználók listája
+A felhasználók listájának megtekintése
+#### Felhasználó törlése
+A Felhasználó egyoldalú azonnali törlése.
+#### Statisztikák megtekintése
+Autómatikusan generált statisztikai adatok megtekintése a felhasználók vonatkozásában.
+
+
 ## 10. Képernyő tervek
 
 ###### Bejelentkezés
