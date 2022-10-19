@@ -156,3 +156,8 @@ Hasonló folyamat mint a *11.1.7. Regisztráció törlése* pontban leírtakban,
 
 #### 11.2.5. Felhasználók listája
 A felhasználók listájána lekérdezése. Az utasítás hatására az adatbázisból lekérdezésre kerül az összes felhasználó neve és e-mail címe.
+
+## 13. Fogalomszótár
+
+MCC kód: A Merchant Category Code (MCC) egy négyjegyű szám, amely főként lakossági pénzügyi szolgáltatásokra vonatkozik és az ISO 18245 szabványban szerepel. A vállalkozások besorolására szolgál az általuk kínált áruk vagy szolgáltatások típusa szerint.
+Az MCC kód alkalmazása igen elterjedt az elfogadóknál. Egy bankkártyás vásárlásnál a bank, a beérkező tranzakciós adatokban látja ezt a bizonyos kódot.
