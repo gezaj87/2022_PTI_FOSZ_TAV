@@ -231,6 +231,117 @@ Vékony kliens oldalon nincs szükség beavatkozásra.
 CSRF TOKEN (cross-site request forgery) implementálása.
 Bejelentkezéskor a hitelesítés után a szerver készít kriptográfiai algoritmussal egy egyedi TOKEN-t, melyet elment a PHP seassion-ben. Amikor a felhasználó a kliens oldalon védett tartalmat kíván megtekinteni, a PHP ellenőrizni fogja a TOKEN jelenlétét, hitelességét. Ez garantálja, hogy a kérés a weboldalon keresztük, a kliens böngészőjében történik.
 
+# 9. Adatbázisterv
+
+**Felhasználók tábla**
+
+| Mezőnév        | Megnevezés                               | Jellemzi:        |
+| -------------- | ---------------------------------------- | ---------------- |
+| ID             | Felhasználó azonosító                    | Elsődleges kulcs |
+| Felhasználónév | A felhasználó neve                       |                  |
+| Jelszó         | A felhasználó jelszava                   |                  |
+| Email cím      | A felhasználó email címe                 |                  |
+| Telefonszám    | A felhasználó telefonszáma               |                  |
+| Valid          | A felhasználó érvényessége a rendszerben |                  |
+
+**Kategóriák tábla**
+
+| Mezőnév | Megnevezés                             | Jellemzi:        |
+| ------- | -------------------------------------- | ---------------- |
+| ID      | Kategória azonosító                    | Elsődleges kulcs |
+| Név     | A kategória neve                       |                  |
+| Valid   | A kategória érvényessége a rendszerben |                  |
+
+**Tételek tábla**
+
+| Mezőnév        | Megnevezés                                  | Jellemzi:        |
+| -------------- | ------------------------------------------- | ---------------- |
+| ID             | Tétel azonosító                             | Elsődleges kulcs |
+| Megnevezés     | A tétel megnevezése                         |                  |
+| Kategória      | A tételhez kapcsolódó kategória azonosító   |                  |
+| Összeg         | A tétel összege                             |                  |
+| Felhasználónév | A tételhez kapcsolódó felhasználó azonosító |                  |
+| Dátum          | A tétel létrehozásának dátuma               |                  |
+| Valid          | A tétel érvényessége a rendszerben          |                  |
+
+## 9.1 Logikai adatmodell
+
+![Logikai adatmodell](PNG/rendszerterv.adatbazisterv.logikai-adatmodell.png)
+
+## 9.2 Egyed-Kapcsolat diagram
+
+![Egyed-Kapcsolat diagram](PNG/rendszerterv.adatbazisterv.egyed-kapcsolat-diagram.png)
+
+## 9.3 Fizikai adatmodellt legeneráló szkriptek
+
+**Felhasználók tábla**
+
+| Megnevezés     | Típus   | Hossz |
+| -------------- | ------- | ----- |
+| ID             | Integer |       |
+| Felhasználónév | String  | 30    |
+| Jelszó         | String  | 30    |
+| Email cím      | String  | 30    |
+| Telefonszám    | Integer |       |
+| Valid          | Boolean |       |
+
+```sql
+CREATE TABLE `ekke_proj_schema`.`felhasznalok` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `felhasznalonev` VARCHAR(30) NOT NULL,
+  `jelszo` VARCHAR(30) NOT NULL,
+  `email` VARCHAR(30) NOT NULL,
+  `telefonszam` INT NOT NULL,
+  `valid` TINYINT NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `felhasznalonev_UNIQUE` (`felhasznalonev` ASC) VISIBLE,
+  UNIQUE INDEX `telefonszam_UNIQUE` (`telefonszam` ASC) VISIBLE,
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
+```
+
+**Kategóriák tábla**
+
+| Megnevezés | Típus   | Hossz |
+| ---------- | ------- | ----- |
+| ID         | Integer |       |
+| Név        | String  | 30    |
+| Valid      | Boolean |       |
+
+```sql
+CREATE TABLE `ekke_proj_schema`.`kategoriak` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nev` varchar(30) NOT NULL,
+  `valid` tinyint NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `nev_UNIQUE` (`nev`));
+```
+
+**Tételek tábla**
+
+| Megnevezés     | Típus   | Hossz |
+| -------------- | ------- | ----- |
+| ID             | Integer |       |
+| Megnevezés     | String  | 30    |
+| Kategória      | String  | 30    |
+| Összeg         | Integer |       |
+| Felhasználónév | String  | 35    |
+| Dátum          | Date    |       |
+| Valid          | Boolean |       |
+
+```sql
+CREATE TABLE `ekke_proj_schema`.`tetelek` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `megnevezes` varchar(30) NOT NULL,
+  `kategoriaid` int NOT NULL,
+  `osszeg` int NOT NULL,
+  `felhasznaloid` int NOT NULL,
+  `datum` datetime NOT NULL,
+  `valid` tinyint NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`),
+  CONSTRAINT `felhasznalo` FOREIGN KEY (`id`) REFERENCES `felhasznalok` (`id`),
+  CONSTRAINT `kategoria` FOREIGN KEY (`id`) REFERENCES `kategoriak` (`id`));
+```
+
 ## 10. Implementációs terv
 A felhasználó webböngészőn keresztül éri el a vékony klienst, vagyis a weboldalakat. Ezek a weboldalak HTML, CSS, JavaScript programozási nyelvekben készülnek. Az adatokat MySQL adatbázis szerveren tárolódnak, melyet az üzleti logika rétegében futó PHP program kapcsol össze a GUI felülettel.
 ###### Perzisztencia (adatbázis osztály)
