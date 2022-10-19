@@ -214,6 +214,26 @@ A böngésző rendszerkövetelményeinek megfelelő kliens
 ### Fejlesztő eszközök
 Visual Studio Code, Apache NetBeans, MySQL Workbench, Github
 
+# 7. Absztrakt domain modell
+
+## 7.1 Domainspecifikáció, fogalmak
+
+**Felhasználó**
+A rendszert használó személy, aki rendelkezik a regisztrációkor megadott adatokkal.
+
+**Tétel**
+A felhasználó által létrehozott kiadásokat tartalmazó adatok.
+
+**Kategória**
+A tételekhez rendelhető kategorizálást segítő adatok.
+
+## 7.2 Absztrakt komponensek, ezek kapcsolatai
+
+![Absztrakt komponensek es ezek kapcsolatai](PNG/rendszerterv.absztrakt-domain-modell.absztrakt-komponensek.png)
+
+A felhasználó képes létrehozni tételeket, ahol a tételeknek meg tud adni egy kategóriát.
+Egy falhasználóhoz több kategória is tartozhat, de egy tételnek csak egy kategóriája lehet.
+
 ## 8. Architekturális terv
 A Backend PHP programozási nyelven készül OOP alapokon. A készítés során az MVC (model-view-controller) programtervezési minta érvényesül.
 
