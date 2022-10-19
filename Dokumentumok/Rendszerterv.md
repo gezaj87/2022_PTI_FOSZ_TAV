@@ -235,9 +235,9 @@ A böngésző rendszerkövetelményeinek megfelelő kliens
 ### Fejlesztő eszközök
 Visual Studio Code, Apache NetBeans, MySQL Workbench, Github
 
-# 7. Absztrakt domain modell
+## 7. Absztrakt domain modell
 
-## 7.1 Domainspecifikáció, fogalmak
+### 7.1 Domainspecifikáció, fogalmak
 
 **Felhasználó**
 A rendszert használó személy, aki rendelkezik a regisztrációkor megadott adatokkal.
@@ -248,7 +248,7 @@ A felhasználó által létrehozott kiadásokat tartalmazó adatok.
 **Kategória**
 A tételekhez rendelhető kategorizálást segítő adatok.
 
-## 7.2 Absztrakt komponensek, ezek kapcsolatai
+### 7.2 Absztrakt komponensek, ezek kapcsolatai
 
 ![Absztrakt komponensek es ezek kapcsolatai](PNG/rendszerterv.absztrakt-domain-modell.absztrakt-komponensek.png)
 
@@ -420,6 +420,7 @@ Admin jogosultság nélküli felhasználó szimulálása, annak érdekében, hog
 
 #### 11.5.1 Bejelentkezési felület:
 A felhasználó be tud-e jelentkezni.
+
 ###### Mezők:
 E-mail cím: e-mail típus.Kötelező kitölteni.
 Kötelező kitölteni.
@@ -431,7 +432,6 @@ E-mail cím: e-mail típus.Kötelező kitölteni.
 Jelszó: password típus. Kötelező kitölteni.
 Jelszó újra: password típus és meg kell egyeznie a Jelszó mező értékkel.  Kötelező kitölteni.
 Telefonszám: tel típus.  Kötelező kitölteni.
- 
 
 #### 11.5.2 Főoldal:
 
@@ -475,7 +475,6 @@ Módosítás: átirányítás a modosit.html-re.
 Törlés: Kitörli az adott tételt.
 Lapozási funkció működése.
  
-
 #### 11.5.5 Tétel módosítása:
 
 ###### Navigáció:
@@ -495,34 +494,30 @@ Mégse: Visszairányít a tetelek.html-re.
 
 ### 11.6 Határidők:
 
-| Megnevezés  | Komment |  Határidő     |
-| ------------- | ------------- | ------------- |
-| Unit-teszt  | Fejlesztés alatt folyamatosan  | 2022.11.05  |
-| GUI tesztelése  | Fejlesztés alatt folyamatosan  | 2022.11.05  |
-| A rendszerbe lépés tesztelése | Fejlesztés alatt folyamatosan  | 2022.11.10  |
-| Biztonsági teszt  | Funkció implementálása után | 2022.11.07  |
-| Általános felhasználóként való tesztelés  | Összes implementált komponens után  | 2022.11.22  |
-| Végső tesztelés  | Átadás előtti pillanat  | 2022.12.05  |
-
+| Megnevezés                               | Komment                            | Határidő   |
+| ---------------------------------------- | ---------------------------------- | ---------- |
+| Unit-teszt                               | Fejlesztés alatt folyamatosan      | 2022.11.05 |
+| GUI tesztelése                           | Fejlesztés alatt folyamatosan      | 2022.11.05 |
+| A rendszerbe lépés tesztelése            | Fejlesztés alatt folyamatosan      | 2022.11.10 |
+| Biztonsági teszt                         | Funkció implementálása után        | 2022.11.07 |
+| Általános felhasználóként való tesztelés | Összes implementált komponens után | 2022.11.22 |
+| Végső tesztelés                          | Átadás előtti pillanat             | 2022.12.05 |
 
 
 ### 11.7 Jegyzőkönyv:
 
-|Megnevezés	|Tesztelő neve	|Funkció leírása	|Elvárt eredmény	|Eredmény|	Megfelelősségi státusz|
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-|Unit-teszt     |               |               |               |               |               |					
-|Unit-teszt     |               |               |               |               |               |					
-|GUI tesztelése |				|               |               |               |               |
-|GUI tesztelése |				|               |               |               |               |					
-|A rendszerbe lépés tesztelése	|				|               |               |               |	|
-|A rendszerbe lépés tesztelése	|				|               |               |               |	|					
-|Biztonsági teszt               |				|               |               |               |   |
-|Általános felhasználóként való tesztelés|		|               |               |               |   |			
-|Általános felhasználóként való tesztelés|		|               |               |               |   |
-|Végső tesztelés|               |               |               |               |               |				
-
-
-
+| Megnevezés                               | Tesztelő neve | Funkció leírása | Elvárt eredmény | Eredmény | Megfelelősségi státusz |
+| ---------------------------------------- | ------------- | --------------- | --------------- | -------- | ---------------------- |
+| Unit-teszt                               |               |                 |                 |          |                        |
+| Unit-teszt                               |               |                 |                 |          |                        |
+| GUI tesztelése                           |               |                 |                 |          |                        |
+| GUI tesztelése                           |               |                 |                 |          |                        |
+| A rendszerbe lépés tesztelése            |               |                 |                 |          |                        |
+| A rendszerbe lépés tesztelése            |               |                 |                 |          |                        |
+| Biztonsági teszt                         |               |                 |                 |          |                        |
+| Általános felhasználóként való tesztelés |               |                 |                 |          |                        |
+| Általános felhasználóként való tesztelés |               |                 |                 |          |                        |
+| Végső tesztelés                          |               |                 |                 |          |                        |	
 
 ## 12. Telepítési terv
 ### 12.1. Szerver oldalon
