@@ -79,3 +79,80 @@ Autómatikusan generált statisztikai adatok megtekintése a felhasználók vona
 ![Modositas](PNG/kepoernyoterv_modosit.png)
 ###### Új tétel
 ![UjTetel](PNG/kepoernyoterv_ujtetel.png)
+
+## 11. Forgatókönyvek
+### 11.1 Felhasználó
+#### 11.1.1 Regisztráció
+1. A felhasználó megadja a regisztrációhoz szükséges adatokat a frontend felületen egy űrlap kitöltésének a segítségével.
+2. Post request-el elküldi a megadott inputokat a backendnek.
+3. A backend fogadja a küldött adatokat és megkezdi a kiértékelést.
+4. Validálás &rarr; Megvizsgálja, hogy az inputok megfelelnek-e a formai követelményeknek. Ha igen, továbbmegy a következő adatfeldolgozási folyamatra, ha nem, megállítja a program futását és felhívja a felhasználó figyelmét a hiányosságokra.
+5. Tárolás &rarr; A validált adatokat eltárolja az adatbázisban. A Jelszó biztonsági okokból kizárólag kódolva kerül tárolásra. A kódolás a PHP password_hash() függvénnyel kerül megvalósításra. Sikertelen tárolás esetén, leáll a program és tájékoztatást küld a felhasználónak a sikertelen tárolás okairól (pl. az e-mail cím már regisztrálva van a rendszerben).
+6. Visszajelzés &rarr; Siker esetén a backend visszajelzést ad a felhasználónak a sikeres műveletről, és átírányítja a bejelentkező felületre.
+
+#### 11.1.2. Bejelentkezés
+1. A felhasználó egy űrlapon megadja a bejelentkezési adatait, mely e-mail cím és jelszóból áll.
+2. Post Request-el elküldi az adatokat a backend részére.
+3. A backend fogadja az adatokat és megkezdi a kiértékelést.
+4. E-mail cím alapján készít egy lekérdezést SQL nyelven.
+5. Fogadja az adatbázistól a lekérdezés eredményét, mely sikeres lekérdezés esetén egy darab, az email címhez tartozó felhasználói rekord. Sikertelen lekérdezés esetén leáll a program és tájékoztatja a felhasználót, hogy a megadott jelszó, nem szerepel az adatbázisban.
+6. Az adatbázisban az e-mail címhez tartozó jelszó kódolva van. Ezért ezt vissza kell fejteni az inputban szereplő jelszó segítségével. Ez a PHP password_verify() függvény segítségével kerül megvalósításra.
+7. Sikertelen jelszó visszafejtés esetén a program leáll és tájékoztatja a felhasználót, hogy rossz jelszót adott meg.
+Siker esetén a program készít egy egyedi TOKEN-t, melyet elment a PHP session-be a felhasználó adataival együtt. A felhasználót belépteti a rendszerbe és átírányítja a kezelőfelületre.
+
+#### 11.1.3. Kiadás rögzítése
+1. A felhasználó a kezelőfelületen megadja a kiadás adatait (lásd 8.2.5-pont).
+2. Post Request-el elküldi az adatokat a backend részére kiértékelésre.
+3. Backend fogadja az adatokat és megkezdi a kiértékelést.
+4. Validálás → Hasonlóan, mint a regisztráció során, megvizsgálja, hogy az inputok megfelelnek-e a formai követelményeknek. Ha igen, tovább megy a következő adatfeldolgozási folyamatra, ha nem, megállítja a program futását és felhívja a felhasználó figyelmét a hiányosságokra.
+5. Tárolás → A validált adatok eltárolása az adatbázisba.
+6. Visszajelzés → Visszajelzés küldése a felhasználónak a sikeres tárolásról.
+
+#### 11.1.4. Kiadás módosítása
+1. A felhasználó a megfelelő kezelői felületen módosításokat hajt végre egy korábban rögzített rekordon.
+2. Put Request-el elküldi a felhasználó az összes adatot ami az űrlapon található.
+3. A Backend fogadja az adatokat és megkezdi a kiértékelést. A Backend külön nem vizsgálja, hogy mely adatok kerültek módosításra és melyek nem. Az összes inputot új adatnak tekinti.
+4. Validásás → Minden adat ismételt validálása, a 11.1.3 - 4-es pontban leírtak szerint.
+5. Módosítás → SQL UPDATE utasítással frissíti a rekordot.
+6. Visszajelzés → Visszajelzés küldése a felhasználó számára a művelet sikerességéről, hiba esetén a hibáról.
+
+#### 11.1.5. Kiadás törlése
+1. A felhasználó a felhasználói felületen megjelöli a törlendő elemet.
+2. Delete Request-el elküldi a felhasználó a törlendő tétel ID-ját.
+3. A backend fogadja az adatot.
+4. Törlés → A rekord ID-jával utasítást küld az SQL adatbázisnak a törlésre.
+5. Visszajelzés → A backedn visszajelzést küld a felhasználónak a törlés sikerességéről.
+
+#### 11.1.6. Regisztrációs adatok módosítása
+Hasonló folyamat, mint a *11.1.4. Kiadás módosítása*.
+
+#### 11.1.7. Regisztráció törlése
+Hasonló folyamat, mint a *11.1.5. Kiadás törlése*. Annyi kiegészítéssel, hogy a törlés folyamán minden adat, minden táblában törlésre kerül, amely a felhasználó azonosítóhoz van rendelve. Törlés előtt a rendszer figyelmeztetést küld a felhasználónak.
+
+#### 11.1.8. Kiadások lekérdezése, szűrése
+1. A felhasználó megadott paraméterek szerint, szűrést tud végezni. Ezek a következők:
+a) kategória
+b) dátum
+c) megnevezés
+d) összeg
+2. A kívánt paramétereket elküldi a Backendnek.
+3. A Backend fogadja a paramétereket és azok alapján egy SQL lekérdezést foganatosít.
+4. A lekérdezés eredményét elküldi a Frontendre, ahol a felhasználó megtekintheti.
+
+### 11.2 Adminisztrátor
+
+#### 11.2.1. Bejelentkezés
+Lásd: *11.1.2. Bejelentkezés*
+Különbség: Másik táblából történik a lekérdezés és a PHP session-ban tárolásra kerül a jogosultság.
+
+#### 11.2.2. Bejelentkezési adatok módosítása
+Lásd: *11.1.6. Regisztrációs adatok módosítása*
+
+#### 11.2.3. Adminisztrátor hozzáadás
+Hasonló a folyamat mint a *11.1.1 Regisztráció* pontban leírtakban. Annyi különbséggel, hogy itt csak egy e-mail címet és jelszót kell megadni input adatnak, és Adminisztrátort csak egy másik adminisztrátor regisztrálhat be.
+
+#### 11.2.4. Adminisztrátor és Felhasználó törlése
+Hasonló folyamat mint a *11.1.7. Regisztráció törlése* pontban leírtakban, csak az Adminisztrátornak jogosultsága van más felhasználókat is törölni.
+
+#### 11.2.5. Felhasználók listája
+A felhasználók listájána lekérdezése. Az utasítás hatására az adatbázisból lekérdezésre kerül az összes felhasználó neve és e-mail címe.
