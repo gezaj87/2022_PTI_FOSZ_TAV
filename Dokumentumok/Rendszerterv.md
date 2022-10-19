@@ -117,6 +117,35 @@ A bejelentkezés minden felhasználó számára egységesen a következő: A fő
 | Tétel     |
 | Kategória |
 
+## 4. Követelmények
+
+**Funkcionális követelmények**
+
+A rendszer használatához mindenképpen szükséges egy előzetes regisztráció az oldalon keresztül. A regisztrációval létrejövő felhasználói fiókkal lehetséges belépni az oldalra és megkezdeni annak használatát. Belépés nélkül csak a regisztráció és a bejelentkezés lehetséges.
+
+A regisztrált felhasználóknak lehetőségük van új tételeket hozzáadni és meglévő tételeket módosítani, valamint törölni azokat. Ezen kívül lehetőségük van az adott tételekhez kategóriákat hozzá rendelni.
+
+**Nemfunkcionális követelmények**
+
+A rendszer használata gyorsan és könnyen elsajátítható. Különösebb informatikai tudást vagy előzetes oktatást nem igényel. 
+Az rendszer nem igényel telepítést vagy konfigurálást mivel az publikus weboldalról elérhető.
+
+**Törvényi előírások, szabványok**
+
+`Szerzői jogi törvény (1999. évi LXXVI. törvény; röviden: Szjt.), illetve a 2016. évi XCIII. törvény A szerzői jogok és a szerzőijoghoz kapcsolódó jogok közös kezeléséről`
+
+`2018. évi LIV. törvény az üzleti titok védelméről`
+
+`1. évi CCXXII. törvény az elektronikus ügyintézés és a bizalmi szolgáltatások általános szabályairól`
+
+`187/2015. (VII. 13.) Korm. rendelet az elektronikus információs rendszerek biztonsági felügyeletét ellátó hatóságok, valamint az információbiztonsági felügyelő feladat- és hatásköréről, továbbá a zárt célú elektronikus információs rendszerek meghatározásáról`
+
+`Az ISO / IEC 12207 a nemzetközi szabvány, amely tartalmazza a szoftver életciklusának kiválasztási, bevezetési és ellenőrzési módszerét.`
+
+`Az ISO 9000 leírja a termékek előállításának hivatalosan szervezett folyamatát, valamint az előrehaladás irányításának és nyomon követésének módszereit.`
+
+`ISO / IEC 15504 Információs technológia — folyamatértékelés, más néven a szoftverfolyamat-fejlesztési képesség meghatározása (SPICE), "a szoftverfolyamatok értékelésének kerete".`
+
 ## 6. Fizikai környezet
 ### Vásárolt softwarekomponensek és külső rendszerek
 - Nincsenek vásárolt szoftverkomponensek.
