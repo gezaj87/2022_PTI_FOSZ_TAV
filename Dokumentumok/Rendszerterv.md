@@ -119,16 +119,37 @@ A bejelentkezés minden felhasználó számára egységesen a következő: A fő
 
 ## 4. Követelmények
 
+**Regisztrált felhasználók lehetőségei**
+- Regisztrációs adatok módosítása
+- Regisztráció törlése
+- Új kiadás rögzítése
+- Korábban rögzített kiadás módosítása
+- Korábban rögzített kiadás törlése
+- Kiadások lekérdezése, szűrése
+- Statisztikai információk, digrammok megtekintése
+
+**Adminisztrátorok lehetőségei**
+- Bejelentkezési adatok módosítása (e-mail és jelszó)
+- Adminisztrátor hozzáadás
+- Adminisztrátorok és Felhasználók törlése
+- Felhasználók listájának elérése
+- Statisztikai adatok megtekintése a felhasználók vonatkozásában
+
 **Funkcionális követelmények**
 
 A rendszer használatához mindenképpen szükséges egy előzetes regisztráció az oldalon keresztül. A regisztrációval létrejövő felhasználói fiókkal lehetséges belépni az oldalra és megkezdeni annak használatát. Belépés nélkül csak a regisztráció és a bejelentkezés lehetséges.
 
-A regisztrált felhasználóknak lehetőségük van új tételeket hozzáadni és meglévő tételeket módosítani, valamint törölni azokat. Ezen kívül lehetőségük van az adott tételekhez kategóriákat hozzá rendelni.
-
 **Nemfunkcionális követelmények**
 
-A rendszer használata gyorsan és könnyen elsajátítható. Különösebb informatikai tudást vagy előzetes oktatást nem igényel. 
-Az rendszer nem igényel telepítést vagy konfigurálást mivel az publikus weboldalról elérhető.
+- A rendszer használata gyorsan és könnyen elsajátítható.
+- Felhasználó szintű informatikai tudás megléte szükséges.
+- Előzetes oktatást nem igényel.
+- A rendszer üzembehelyezése egy szerver számítógépen történik, tetszőleges operációs rendszeren melyen az alábbi platformok megléte feltétel:
+  - Apache webszerver
+  - MySQL adatbázis szerver
+  - PHP futtatói környezet
+  - FTP vagy Shell hozzáférési lehetőség
+
 
 **Törvényi előírások, szabványok**
 
