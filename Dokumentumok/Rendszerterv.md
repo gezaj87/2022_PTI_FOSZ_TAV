@@ -146,6 +146,53 @@ Az rendszer nem igényel telepítést vagy konfigurálást mivel az publikus web
 
 `ISO / IEC 15504 Információs technológia — folyamatértékelés, más néven a szoftverfolyamat-fejlesztési képesség meghatározása (SPICE), "a szoftverfolyamatok értékelésének kerete".`
 
+## 5. Funkcionális terv
+### 5.1 Rendszerszereplők
+
+A rendszer használatához mindenképpen szükséges regisztrálni az oldalon keresztül. 
+A rendszerbe regisztrált felhasználó képes új tételeket hozzáadni és ehhez kategóriát hozzá rendelni, meglévő tételeket módosítani, valamint törölni azokat. Ezeken kívül lehetőség van szűrni is meglévő tételeket.
+
+### 5.2 Rendszerhasználati esetek és lefutásaik
+
+**Regisztráció**
+
+![Regisztráció](PNG/rendszerterv.funkcionalis-terv.diagram-regisztracio.png)
+
+**Szűrés**
+
+![Szűrés](PNG/rendszerterv.funkcionalis-terv.diagram-szures.png)
+
+**Új tétel hozzáadása**
+
+![Új tétel hozzáadása](PNG/rendszerterv.funkcionalis-terv.diagram-uj-tetel.png)
+
+**Meglévő tétel módosítása**
+
+![Meglévő tétel módosítása](PNG/rendszerterv.funkcionalis-terv.diagram-tetel-modositas.png)
+
+**Meglévő tétel törlése**
+
+![Meglévő tétel törlése](PNG/rendszerterv.funkcionalis-terv.diagram-tetel-torles.png)
+
+### 5.3 Határ osztályok
+
+**Felhasználói tevékenységeihez kapcsolódó határosztályok:**
+
+![Határosztályok](PNG/rendszerterv.funkcionalis-terv.diagram-hatarosztalyok.png)
+
+### 5.4 Menühierarchiák
+
+**Elérhető funkciók regisztráció nélkül:**
+- Bejelentkezés
+- Regisztráció
+
+**Elérhető funkciók regisztrációval:**
+- Új tétel rögzítése
+- Tételek megjelenítése
+- Tételek szűrése
+- Tételek módosítása
+- Tételek törlése
+
 ## 6. Fizikai környezet
 
 ### Platformok
