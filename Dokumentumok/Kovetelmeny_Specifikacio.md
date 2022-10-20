@@ -74,3 +74,25 @@ Vásárlási hely, szolgáltatást nyújtó, pénzt elfogadó
 | 04  | Platformfüggetlen működés               | Az iparágban használt, szabványos és operációs rendszertől független technológiák használata.                                                                                                        | 1.0v   |
 | 05  | Költséghatékony üzemeltetés             | A költséghatékony üzemeltetést a szabványos és elterjedt technológiák használata biztosítja.                                                                                                         | 1.0v   |
 | 05  | Bővíthetőség                            | A felhasználók számának bővíthetősége, valamint a kezelt adatok mennyiségének és az utólag újabb funkciók hozzáadásának lehetőségének biztosítja a bővíthetőséget.                                   | 1.0v   |
+
+## 8. Riportok
+
+### 8.1 Szabad riport
+
+- Egy olyan rendszert lenne szükséges létrehozni, ahol a felhasználók képesek kiadásaikat rögzíteni, így a későbbiekben nyomon tudják követni azokat.
+- Szükséges ezeket a kiadással kapcsolatos tételeket a jövőben módosítani, vagy törölni.
+- Hasznos lenne statisztikát is vezetni ezekről a kiadásokról, szöveges és grafikus módon.
+
+### 8.2 Irányított riport
+
+- **Miért használnák a felhasználók ezt a rendszert?**
+    
+Olyan rendszer, ahol a felhasználók kiadásaikat rögzítik és későbbiekben nyomon tudják követni azokat.
+
+- **Milyen funkciók szükségesek a rendszerbe?**
+
+Kiadások rögzítése és módosítása, valamint törlése.
+
+- **Milyen statisztikai lehetőségek legyenek a rendszerben?**
+
+Lehessen szöveges és grafikus módon a kiadásokról statisztikát vezetni.
