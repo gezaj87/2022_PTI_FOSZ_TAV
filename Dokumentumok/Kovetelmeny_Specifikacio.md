@@ -63,3 +63,14 @@ Vásárlási hely, szolgáltatást nyújtó, pénzt elfogadó
 - Tétel törlése: felhasználói jogosultsággal belépés => tételek listázása menüpont => törlés művelet kiválasztása => véglegesítés.
 - Tételek megtekintése: felhasználói jogosultsággal belépés => tételek megtekintése menüpont.
 - Dátum szűrő: felhasználó a dátum mezőkbe beírja a keresett időszakot =>  Az adott időszakban lévő tételek megjelenítése
+
+## 7. Követelménylista
+
+| ID  | Megnevezés                              | Kifejtés                                                                                                                                                                                             | Verzió |
+| --- | --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| 01  | Felhasználók regisztrálása              | Felhasználók regisztrálásának megtörténte a rendszerbe                                                                                                                                               | 1.0v   |
+| 02  | Felhasználói adatok és tételek kezelése | Felhasználók adatainak és tételeinek felvétele a rendszerbe.                                                                                                                                         | 1.0v   |
+| 03  | Egyszerűen használható kezelőfelület    | Olyan felhasználói felület megvalósítása, ami a legelterjedtebb internet böngészőkből használható, olyan módon, hogy a felhasználók számára az új rendszer használata a lehető legegyszerűbb legyen. | 1.0v   |
+| 04  | Platformfüggetlen működés               | Az iparágban használt, szabványos és operációs rendszertől független technológiák használata.                                                                                                        | 1.0v   |
+| 05  | Költséghatékony üzemeltetés             | A költséghatékony üzemeltetést a szabványos és elterjedt technológiák használata biztosítja.                                                                                                         | 1.0v   |
+| 05  | Bővíthetőség                            | A felhasználók számának bővíthetősége, valamint a kezelt adatok mennyiségének és az utólag újabb funkciók hozzáadásának lehetőségének biztosítja a bővíthetőséget.                                   | 1.0v   |
