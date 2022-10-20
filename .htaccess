@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !/Spendor/public/js
+RewriteCond %{REQUEST_URI} !/Spendor/public/css
+RewriteRule ^(.*)$ Spendor/public/index.php?url=$1 [QSA]
