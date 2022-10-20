@@ -98,3 +98,9 @@ Kiadások rögzítése és módosítása, valamint törlése.
 - **Milyen statisztikai lehetőségek legyenek a rendszerben?**
 
 Lehessen szöveges és grafikus módon a kiadásokról statisztikát vezetni.
+
+## 9. Fogalomszótár
+
+MCC kód: A Merchant Category Code (MCC) egy négyjegyű szám, amely főként lakossági pénzügyi szolgáltatásokra vonatkozik és az ISO 18245 szabványban szerepel. A vállalkozások besorolására szolgál az általuk kínált áruk vagy szolgáltatások típusa szerint.
+Az MCC kód alkalmazása igen elterjedt az elfogadóknál. Egy bankkártyás vásárlásnál a bank, a beérkező tranzakciós adatokban látja ezt a bizonyos kódot.
+
