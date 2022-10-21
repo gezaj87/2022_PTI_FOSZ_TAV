@@ -14,12 +14,15 @@ class App
         $Router = new Router($this->url);
 
         //útvonalak definiálása ezen sor altt
-        
+        $Router->Get('/', [Home::class, 'Start']);
         
 
-        if (!isset($_SESSION['router']) || !$_SESSION['router']) {
+        if (!isset($_SESSION['router']) || !$_SESSION['router'])
+        {
             http_response_code(404);
-        } else {
+        } 
+        else
+        {
             $_SESSION['router'] = false;
         }
     }

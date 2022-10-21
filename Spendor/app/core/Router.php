@@ -50,6 +50,13 @@ class Router extends App
     }
 
 
+    /**
+     *
+     * 
+     *
+     * @param    array  $function [class, 'name_of_function']
+     *
+     */
     public function Get(string $route, $function)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'GET')
