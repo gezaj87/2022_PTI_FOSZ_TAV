@@ -3,6 +3,3 @@
 .idea
 .env
 nbproject/
-/nbproject/private/
-nbproject/project.properties
-nbproject/project.xml
