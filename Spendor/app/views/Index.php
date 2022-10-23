@@ -15,7 +15,7 @@
             <div class="row">                
                 <h1>
                     <a>
-                        <img src="public/img/logo4.jpg" alt="logo" height="70">
+                        <img src="Spendor/public/img/logo4.jpg" alt="logo" height="70">
                     </a>
                     PTI-FOSZ-TAV-2022-AFP
                 </h1>                
