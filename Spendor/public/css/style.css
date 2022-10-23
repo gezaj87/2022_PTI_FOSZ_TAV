@@ -1,0 +1,132 @@
+/*oldalra görgetés kikapcsolása */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+/*Header távolság beállítása*/
+header{
+    margin-left: 10px;
+    text-align: center;
+}
+
+/*Navigáció eltolása*/
+.navbar{
+    margin-left:30px;
+    margin-top:5px;
+    margin-bottom: 1cm;    
+}
+
+/*Navigáción szöveg szín*/
+.nav-link{
+    color:black;
+}
+
+/*Kék háttér,fehér font a szöveg,tábla stb...*/
+.hatter{
+    background-color: rgb(30, 144, 255) !important;
+    color:white;
+}
+
+/*Hover effekt a navbarban, módosítás, törlés*/
+.megtekintes:hover, .kijelentkezes:hover, .tetelRogzites:hover, .modositas:hover, .torles:hover, .profil:hover{
+    cursor:pointer;
+}
+/*Betűméret változtatása*/
+.row{
+    font-size: 16px;
+}
+/*CONTENT körüli téma*/
+.content{
+    padding-top: 3cm;
+    padding-left: 3cm;
+    padding-right: 3cm;
+    padding-bottom: 2cm;
+    background-color: rgba(133, 191, 250, 0.63);
+    border:2px black solid;
+}
+.foTablazat{
+    padding-right: 2cm;
+    overflow-x: auto;
+}
+/*táblázat körüli margin*/
+.tablazat:not(.modositasTablazat){
+    margin-top:15px;
+   
+}
+/*tábla tartalmának igazítása*/
+th,td{
+    text-align: center;
+    padding: 15px;
+    
+}
+
+/*hyper-link dekóráció*/
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/*lapozás*/
+.pagination{
+    margin-right: 50px;
+    margin-top: 3cm;
+}
+/*Két dátumszűrőhőz tartozó margin*/
+.datum{
+    margin-bottom: 50px;
+}
+
+/*Chart méretek*/
+#myChart{
+    width:400%;
+    max-width:1200px;
+}
+/*Form reg és bejelentkezés igazítása*/
+.regisztracioCimke, .bejelentkezesCimke, .ujTetel, .modositTetel,.felhasznaloModositCimke{
+    margin-right: 50px;
+    margin-bottom: 0px;
+}
+/*textboxok közti távolság*/
+input,select{
+    margin-bottom: 1px;
+}
+/*Form textboxok/dropbox hossza*/
+label:not(.datum), select, #datum_id, #modositTetelDatum{    
+    width: 190px; 
+}
+/*Form gomb színek*/
+.regisztracioGombok, .bejelentkezesGombok, .rogzites, .alapHelyzet, .modositasGombok, .felhasznaloModositGombok{
+    margin-top: 33px;
+    background-color: rgb(30, 144, 255);
+    color:white;
+    border:1px black solid;
+}
+/*modosit.html megse gomb egyvonalba hozásának segítsége*/
+.tetelModositasMegseJobbra{
+    
+    text-align: center;
+}
+/*modosit.html megse gomb egyvonalba hozása*/
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+/*Form gombok távolságának kiigazítása*/
+#bejelentkezes{
+    margin-right:200px
+}
+#regRegisztralas, #adminRegisztralas{
+    margin-right: 269px;
+}
+
+#rogzites_id{
+    margin-right: 300px;
+}
+#modosit_id{
+    margin-right: 282px;    
+}
+#regisztracioMegse{
+    margin-left: 70px;
+}
