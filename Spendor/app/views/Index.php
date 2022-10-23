@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Spendor-Bejelentkezés</title>
-        <link rel="stylesheet" href="/Spendor/public/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/Spendor/public/css/style.css">
-        <script src="/Spendor/public/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="/Spendor/Spendor/public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/Spendor/Spendor/public/css/style.css">
+        <script src="/Spendor/Spendor/public/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     </head>
     <body>
@@ -15,7 +15,7 @@
             <div class="row">                
                 <h1>
                     <a>
-                        <img src="img/logo4.jpg" alt="logo" height="70">
+                        <img src="/Spendor/public/img/logo4.jpg" alt="logo" height="70">
                     </a>
                     PTI-FOSZ-TAV-2022-AFP
                 </h1>                
@@ -43,10 +43,6 @@
             </div>
         </nav>
         <!--CONTENT-->
-        <main><?php include_once $view.'.php' ?></main>
-        <!--FOOTER--> 
-        <footer>
-        <h2>Footer</h2>          
-        </footer>        
+        <main><?php include_once $view.'.php' ?></main>      
     </body> 
 </html>
