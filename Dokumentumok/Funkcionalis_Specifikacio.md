@@ -19,6 +19,15 @@ A mai piaci helyzetben úgy érezhetjük, hogy folyik ki a kezeink közül a pé
 
 A jelenlegi helyzetben vázoltak miatt azt a lehetőséget látjuk, hogy olyan embereknek is tudunk segíteni, akiknek nem anyagi segítségre van szüksége, hanem a saját anyagi helyzetének a karbantartására van igénye. Ennek a segítsége érdekében különböző grafikai megjelenítés kell, hogy könnyen látható legyen kategóriánként, hogy az egyén megismerje önmagát, a vásárlási szokásait, és lehetőleg abba az irányba terelni, hogy ezeket a szokásokat változtassa meg a tudatos vásárló irányába.
 
+## 6. Igényelt üzleti folyamatok modellje
+
+| Verzió | Üzleti folyamat                  | Modell                                                             |
+| ------ | -------------------------------- | ------------------------------------------------------------------ |
+| 1.0v   | Regisztráció                     | A felhasználók regisztrálásának lehetősége a rendszerbe.           |
+| 1.0v   | Kiadások rögzítése és módosítása | Új kiadások rögzítése és meglévő kiadások módosítása a rendszerbe. |
+| 1.0v   | Kiadások törlése                 | Meglévő kiadások törlése a rendszerből.                            |
+| 1.0v   | Kategóriák hozzárendelése        | Új tételekhez kategóriák hozzárendelése tételekhez.                |
+
 ## 8. Használati esetek [Use cases]
 ### 8.1. Szereplők
 	- Felhasználó
