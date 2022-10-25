@@ -2,7 +2,7 @@
 
 class Auth
 {
-    public function Auth(bool $admin = false)
+    public static function Auth(bool $admin = false)
     {
         if (!isset($_SESSION['token']) || !isset($_SESSION['email'])) return false;
 
