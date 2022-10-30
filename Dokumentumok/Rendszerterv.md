@@ -276,14 +276,16 @@ Bejelentkezéskor a hitelesítés után a szerver készít kriptográfiai algori
 
 **Felhasználók tábla**
 
-| Mezőnév        | Megnevezés                               | Jellemzi:        |
-| -------------- | ---------------------------------------- | ---------------- |
-| ID             | Felhasználó azonosító                    | Elsődleges kulcs |
-| Felhasználónév | A felhasználó neve                       |                  |
-| Jelszó         | A felhasználó jelszava                   |                  |
-| Email cím      | A felhasználó email címe                 |                  |
-| Telefonszám    | A felhasználó telefonszáma               |                  |
-| Valid          | A felhasználó érvényessége a rendszerben |                  |
+| Mezőnév         | Megnevezés                                         | Jellemzi:        |
+| --------------- | -------------------------------------------------- | ---------------- |
+| ID              | Felhasználó azonosító                              | Elsődleges kulcs |
+| Név             | A felhasználó neve                                 |                  |
+| Email cím       | A felhasználó email címe                           |                  |
+| Jelszó          | A felhasználó jelszava                             |                  |
+| Születési dátum | A felhasználó születési dátuma                     |                  |
+| Telefonszám     | A felhasználó telefonszáma                         |                  |
+| Admin           | A felhasználó normál vagy adminisztrátor jogkörrel |                  |
+| Valid           | A felhasználó érvényessége a rendszerben           |                  |
 
 **Kategóriák tábla**
 
@@ -315,72 +317,80 @@ Bejelentkezéskor a hitelesítés után a szerver készít kriptográfiai algori
 
 ## 9.3 Fizikai adatmodellt legeneráló szkriptek
 
+**Adatbázis létrehozása**
+
+```sql
+CREATE DATABASE IF NOT EXISTS ekke_proj_schema;
+```
+
 **Felhasználók tábla**
 
-| Megnevezés     | Típus   | Hossz |
-| -------------- | ------- | ----- |
-| ID             | Integer |       |
-| Felhasználónév | String  | 30    |
-| Jelszó         | String  | 30    |
-| Email cím      | String  | 30    |
-| Telefonszám    | Integer |       |
-| Valid          | Boolean |       |
+| Megnevezés      | Típus    | Hossz | Alapérték |
+| --------------- | -------- | ----- | --------- |
+| ID              | Integer  |       |           |
+| Név             | String   | 100   |           |
+| Email cím       | String   | 60    |           |
+| Jelszó          | String   | 60    |           |
+| Születési dátum | Datetime |       |           |
+| Telefonszám     | String   | 15    | '0'       |
+| Admin           | Boolean  |       | 0         |
+| Valid           | Boolean  |       | 1         |
 
 ```sql
 CREATE TABLE `ekke_proj_schema`.`felhasznalok` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `felhasznalonev` VARCHAR(30) NOT NULL,
-  `jelszo` VARCHAR(30) NOT NULL,
-  `email` VARCHAR(30) NOT NULL,
-  `telefonszam` INT NOT NULL,
+  `nev` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(60) NOT NULL,
+  `jelszo` VARCHAR(60) NOT NULL,
+  `szuldatum` DATETIME NOT NULL,
+  `telefonszam` VARCHAR(15) DEFAULT '0',
+  `admin` TINYINT NOT NULL DEFAULT 0,
   `valid` TINYINT NOT NULL DEFAULT 1,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `felhasznalonev_UNIQUE` (`felhasznalonev` ASC) VISIBLE,
-  UNIQUE INDEX `telefonszam_UNIQUE` (`telefonszam` ASC) VISIBLE,
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
+PRIMARY KEY (`id`),
+UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
 ```
 
 **Kategóriák tábla**
 
-| Megnevezés | Típus   | Hossz |
-| ---------- | ------- | ----- |
-| ID         | Integer |       |
-| Név        | String  | 30    |
-| Valid      | Boolean |       |
+| Megnevezés | Típus   | Hossz | Alapérték |
+| ---------- | ------- | ----- | --------- |
+| ID         | Integer |       |           |
+| Név        | String  | 40    |           |
+| Valid      | Boolean |       | 1         |
 
 ```sql
 CREATE TABLE `ekke_proj_schema`.`kategoriak` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nev` varchar(30) NOT NULL,
+  `nev` varchar(40) NOT NULL,
   `valid` tinyint NOT NULL DEFAULT 1,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `nev_UNIQUE` (`nev`));
+PRIMARY KEY (`id`),
+UNIQUE KEY `nev_UNIQUE` (`nev`));
 ```
 
 **Tételek tábla**
 
-| Megnevezés     | Típus   | Hossz |
-| -------------- | ------- | ----- |
-| ID             | Integer |       |
-| Megnevezés     | String  | 30    |
-| Kategória      | String  | 30    |
-| Összeg         | Integer |       |
-| Felhasználónév | String  | 35    |
-| Dátum          | Date    |       |
-| Valid          | Boolean |       |
+| Megnevezés     | Típus   | Hossz | Alapérték |
+| -------------- | ------- | ----- | --------- |
+| ID             | Integer |       |           |
+| Megnevezés     | String  | 30    |           |
+| Kategória      | String  | 30    |           |
+| Összeg         | Integer |       |           |
+| Felhasználónév | String  | 35    |           |
+| Dátum          | Date    |       |           |
+| Valid          | Boolean |       | 1         |
 
 ```sql
 CREATE TABLE `ekke_proj_schema`.`tetelek` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `megnevezes` varchar(30) NOT NULL,
+  `megnevezes` varchar(60) NOT NULL,
   `kategoriaid` int NOT NULL,
   `osszeg` int NOT NULL,
   `felhasznaloid` int NOT NULL,
   `datum` datetime NOT NULL,
   `valid` tinyint NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`),
-  CONSTRAINT `felhasznalo` FOREIGN KEY (`id`) REFERENCES `felhasznalok` (`id`),
-  CONSTRAINT `kategoria` FOREIGN KEY (`id`) REFERENCES `kategoriak` (`id`));
+PRIMARY KEY (`id`),
+CONSTRAINT `felhasznalo` FOREIGN KEY (`id`) REFERENCES `felhasznalok` (`id`),
+CONSTRAINT `kategoria` FOREIGN KEY (`id`) REFERENCES `kategoriak` (`id`));
 ```
 
 ## 10. Implementációs terv
