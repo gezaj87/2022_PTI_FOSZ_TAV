@@ -19,6 +19,18 @@ A mai piaci helyzetben úgy érezhetjük, hogy folyik ki a kezeink közül a pé
 
 A jelenlegi helyzetben vázoltak miatt azt a lehetőséget látjuk, hogy olyan embereknek is tudunk segíteni, akiknek nem anyagi segítségre van szüksége, hanem a saját anyagi helyzetének a karbantartására van igénye. Ennek a segítsége érdekében különböző grafikai megjelenítés kell, hogy könnyen látható legyen kategóriánként, hogy az egyén megismerje önmagát, a vásárlási szokásait, és lehetőleg abba az irányba terelni, hogy ezeket a szokásokat változtassa meg a tudatos vásárló irányába.
 
+## 4. A rendszerre vonatkozó külső megszorítások
+
+**Európai uniós rendeletek, irányelvek, ajánlások**
+
+*AZ EURÓPAI PARLAMENT ÉS A TANÁCS (EU) 2016/679 RENDELETE (2016. április 27.)* a természetes személyeknek a személyes adatok kezelése tekintetében történő védelméről és az ilyen adatok szabad áramlásáról,
+
+*A Bizottság 2011/711/EU ajánlása (2011. október 27.)* a kulturális anyagok digitalizálásáról és online hozzáférhetőségéről, valamint a digitális megőrzésről
+
+*98/34/EK európai parlamenti és tanácsi irányelv* a műszaki szabványok és szabályok, valamint az információs társadalom szolgáltatásaira vonatkozó szabályok terén információszolgáltatási eljárás megállapításáról (a 98/48//EK európai parlamenti és tanácsi irányelvvel módosította)
+
+*96/9/EK irányelv* (1996. március 11.) az adatbázisok jogi védelméről
+
 ## 5. Jelenlegi üzleti folyamatok modellje
 Felhasználó (vásárló/szolgáltatást igénybe vevő) 	
 
