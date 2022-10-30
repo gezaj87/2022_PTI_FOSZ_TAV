@@ -103,8 +103,16 @@ A Felhasználó egyoldalú azonnali törlése.
 #### Statisztikák megtekintése
 Autómatikusan generált statisztikai adatok megtekintése a felhasználók vonatkozásában.
 
+## 9. Megfeleltetés, hogyan fedik le a használati esetek a követelményeket
 
-## 10. Képernyő tervek
+* K01, K02, K03: Az alkalmazást úgy hozzuk létre, hogy tartalmazza a tételek és felhasználók adminisztrációját, melyet felhasználók, ill. adminok emailcím/jelszó megadásával a rendszerbe belépve fognak elérni. Ezek fogják adni a rendszer fő funkcióit.
+* K04:Két különböző jogosultsági szintet fogunk kialakítani. Az adminisztrátori jogosultsággal rendelkezők minden funkcióhoz hozzá fognak férni, felhasználói fiókokat tudnak létrehozni/törölni. A felhasználó a rendszerbe belépve listákat és kimutatásokat tud lekérni.
+* K05: A felhasználói felületet úgy alakítjuk ki, amely egy általános weboldal képét fogja nyújtani, az egyes funkciók egyértelmű elnevezést kapnak, és könnyen elérhetők lesznek.
+* K06: A rendszer elkészítésekor ügyelünk a platformfüggetlen, robosztus működés kialakítására, ezért ellenőrizzük kódunk helyességét, hogy egy adott HTML elemet támogatják-e a böngészők, fontosabb alkalmazások és kisegítő technológiák. A HTML vizsgálathoz beleértjük a CSS vizsgálatot is. A teszteléseket elvégezzük Firefox, Chrome, Explorer, Opera, Safari böngészőkön, ill. Windows, Linux, iOs operációs rendszeren is.
+* K07: A szabványos és elterjedt technológiák használata biztosítja. 
+* K08: A kezelt adatokat MYSQL adatbázisban fogjuk tárolni. Az adatbázis használatával biztosítjuk az adatok bővíthetőségét. A applikációt PHP objektum orientált módon valósítjuk meg, amellyel új funkciókat könnyedén tudunk utólag hozzáadni a rendszerhez.
+
+## 10. Képernyőtervek
 
 ###### Bejelentkezés
 ![Bejelentkezes](PNG/kepernyoterv_bejelentkezes.png)
@@ -205,9 +213,9 @@ K02|V1.0|Felhasználók adminisztrációja|Felhasználók regisztrálása, törl
 K03|V1.0|Tételek adminisztrációja|Tételek módosításának ill. törlésének kezelése az igényelt üzleti folyamatokban leírtak szerint.
 K04|V1.0|Felhasználói fiókok kezelése|Bejelentkezés, felhasználói adatok módosítása,, listák és kimutatások készítése az igényelt üzleti folyamatokban leírtak szerint.  
 K05|V1.0|Egyszerűen használható kezelőfelület|A legelterjedtebb internet böngészőkből használható felhasználói felület megvalósítása, oly módon, hogy a felhasználók számára a beletanulás a lehető legegyszerűbb legyen..
-K07|V1.0|Platformfüggetlen, robusztus működés|Szabványos, az iparágban régóta bevált, operációs rendszertől független technológiák használata: Php, Apache HTTP szerver, MySQL.   
-K08|V1.0|Költséghatékony üzemeltetés|A szabványos és elterjedt technológiák használata biztosítja. 
-K09|V1.0|Bővíthetőség|A kezelt adatok mennyiségének, valamint a felhasználók számának bővíthetősége és utólag újabb funkciók hozzáadásának lehetőségének biztosítása.
+K06|V1.0|Platformfüggetlen, robusztus működés|Szabványos, az iparágban régóta bevált, operációs rendszertől független technológiák használata: Php, Apache HTTP szerver, MySQL.   
+K07|V1.0|Költséghatékony üzemeltetés|A szabványos és elterjedt technológiák használata biztosítja. 
+K08|V1.0|Bővíthetőség|A kezelt adatok mennyiségének, valamint a felhasználók számának bővíthetősége és utólag újabb funkciók hozzáadásának lehetőségének biztosítása.
 
 
 ## 13. Fogalomszótár
