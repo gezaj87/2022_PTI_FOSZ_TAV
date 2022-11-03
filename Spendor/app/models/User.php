@@ -1,7 +1,7 @@
 <?php
 
 class User {
-    private int $id = null;
+    private ?int $id = null;
     private string $password;
     private string $email;
     private string $name;
@@ -17,7 +17,7 @@ class User {
     private const MIN_LENGTH_OF_PASSW = 4;
     private const INVALID_EMAIL = "Nem megfelelő email formátum. A karaktereinek 1 és 60 közé kell esnie!";
 
-    public function __construct(int $id=null, string $password, string $email, string $name, DateTime $birth_of_date, string $phone_number = null){
+    public function __construct(string $password, string $email, string $name, DateTime $birth_of_date, string $phone_number = null, int $id=null){
         if ($id)
         {
             if (self::PositiveIntegerCheck($id)) $this->id = $id;
@@ -29,7 +29,7 @@ class User {
         $this->email = $email;
         if (self::StringCheck($name, self::MAX_LENGTH_OF_NAME)) $this->name = $name;
         else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_NAME.self::_TEXT);
-        if (self::StringCheck($phone_number, self::MAX_LENGTH_OF_PHONE_NUMBER)) $this->phone_number = $phone_number;
+        if ($phone_number && self::StringCheck($phone_number, self::MAX_LENGTH_OF_PHONE_NUMBER)) $this->phone_number = $phone_number;
         else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_PHONE_NUMBER.self::_TEXT);
         $this->birth_of_date =$birth_of_date;
 
