@@ -26,8 +26,9 @@ class User {
         if (self::StringCheck($password, self::MAX_LENGTH_OF_PASSW_EMAIL, self::MIN_LENGTH_OF_PASSW)) $this->password = $password;
         else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_PASSW_EMAIL.self::_TEXT);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) throw new Exception("Invalid email format");
+        $this->email = $email;
         //if (self::StringCheck($email, self::MAX_LENGTH_OF_PASSW_EMAIL)) $this->email = $email;
-        else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_PASSW_EMAIL.self::_TEXT);
+        //else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_PASSW_EMAIL.self::_TEXT);
         if (self::StringCheck($name, self::MAX_LENGTH_OF_NAME)) $this->name = $name;
         else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_NAME.self::_TEXT);
         if (self::StringCheck($phone_number, self::MAX_LENGTH_OF_PHONE_NUMBER)) $this->phone_number = $phone_number;
