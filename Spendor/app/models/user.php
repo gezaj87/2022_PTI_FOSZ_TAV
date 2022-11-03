@@ -15,22 +15,23 @@ class User {
     private const MAX_LENGTH_OF_PASSW_EMAIL = 60;
     private const MAX_LENGTH_OF_NAME = 100;
     private const MAX_LENGTH_OF_PHONE_NUMBER = 15;
+    private const MIN_LENGTH_OF_PASSW = 4;
 
-    public function __construct(int $id, string $password, string $email, string $name, DateTime $szuldatum, bool $admin, string $phone_number = null){
+    public function __construct(int $id, string $password, string $email, string $name, DateTime $birth_of_date, bool $admin, string $phone_number = null){
         if ($id)
         {
             if (self::PositiveIntegerCheck($id)) $this->id = $id;
             else throw new Exception(self::NOT_POSITIVE_INTEGER);
         }
-        if (self::NameCheck($password, MAX_LENGTH_OF_PASSW_EMAIL)) $this->password = $password;
-        else throw new Exception(self::INVALID_.MAX_LENGTH_OF_PASSW_EMAIL._TEXT);
-        if (self::NameCheck($email, MAX_LENGTH_OF_PASSW_EMAIL)) $this->email = $email;
-        else throw new Exception(self::INVALID_.MAX_LENGTH_OF_PASSW_EMAIL._TEXT);
-        if (self::NameCheck($name, MAX_LENGTH_OF_NAME)) $this->name = $name;
-        else throw new Exception(self::INVALID_.MAX_LENGTH_OF_NAME._TEXT);
-        if (self::NameCheck($phone_number, MAX_LENGTH_OF_PHONE_NUMBER)) $this->phone_number = $phone_number;
-        else throw new Exception(self::INVALID_.MAX_LENGTH_OF_PHONE_NUMBER._TEXT);
-
+        if (self::StringCheck($password, self::MAX_LENGTH_OF_PASSW_EMAIL, self::MIN_LENGTH_OF_PASSW)) $this->password = $password;
+        else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_PASSW_EMAIL.self::_TEXT);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) throw new Exception("Invalid email format");
+        //if (self::StringCheck($email, self::MAX_LENGTH_OF_PASSW_EMAIL)) $this->email = $email;
+        else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_PASSW_EMAIL.self::_TEXT);
+        if (self::StringCheck($name, self::MAX_LENGTH_OF_NAME)) $this->name = $name;
+        else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_NAME.self::_TEXT);
+        if (self::StringCheck($phone_number, self::MAX_LENGTH_OF_PHONE_NUMBER)) $this->phone_number = $phone_number;
+        else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_PHONE_NUMBER.self::_TEXT);
         $this->birth_of_date =$birth_of_date;
         $this->admin = $admin;
     }
@@ -70,10 +71,10 @@ class User {
         return $this->bool;
     }
 
-    private static function StringCheck(string $string, int $max_of_length): bool
+    private static function StringCheck(string $text, int $max_of_length, int $min_of_length=0): bool
     {
-        $name_length = strlen($name);
-        if ($name_length > 0 && $name_length <= $max_of_length)
+        $text_length = strlen($text);
+        if ($text_length > $min_of_length && $text_length <= $max_of_length)
         {
             return true;
         }
