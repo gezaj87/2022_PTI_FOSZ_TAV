@@ -15,6 +15,7 @@ class User {
     private const MAX_LENGTH_OF_NAME = 100;
     private const MAX_LENGTH_OF_PHONE_NUMBER = 15;
     private const MIN_LENGTH_OF_PASSW = 4;
+    private const INVALID_PASS="A megnevezés 4 és ";
     private const INVALID_EMAIL = "Nem megfelelő email formátum. A karaktereinek 1 és 60 közé kell esnie!";
 
     public function __construct(string $password, string $email, string $name, DateTime $birth_of_date, string $phone_number = null, int $id=null){
@@ -24,8 +25,8 @@ class User {
             else throw new Exception(self::NOT_POSITIVE_INTEGER);
         }
         if (self::StringCheck($password, self::MAX_LENGTH_OF_PASSW_EMAIL, self::MIN_LENGTH_OF_PASSW)) $this->password = $password;
-        else throw new Exception("A megnevezés 4 és ".self::MAX_LENGTH_OF_PASSW_EMAIL.self::_TEXT);
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL) || (self::StringCheck($email, self::MAX_LENGTH_OF_PASSW_EMAIL))) throw new Exception(self::INVALID_EMAIL);
+        else throw new Exception(self::INVALID_PASS.self::MAX_LENGTH_OF_PASSW_EMAIL.self::_TEXT);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !(self::StringCheck($email, self::MAX_LENGTH_OF_PASSW_EMAIL))) throw new Exception(self::INVALID_EMAIL);
         $this->email = $email;
         if (self::StringCheck($name, self::MAX_LENGTH_OF_NAME)) $this->name = $name;
         else throw new Exception(self::INVALID_.self::MAX_LENGTH_OF_NAME.self::_TEXT);
