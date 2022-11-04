@@ -78,7 +78,7 @@ class User {
         return $this->phone_number;
     }
 
-    private static function StringCheck(string $text, int $max_of_length, int $min_of_length=0): bool
+    private static function StringCheck(string $text, int $max_of_length, int $min_of_length=1): bool
     {
         $text_length = strlen($text);
         if ($text_length >= $min_of_length && $text_length <= $max_of_length)
