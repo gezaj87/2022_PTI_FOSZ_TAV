@@ -37,6 +37,8 @@ class Register extends Controller
         {
             $respone['validation_success'] = false;
             $respone['message'] = $e->getMessage();
+            self::Get($respone);
+            die();
         }
 
 
