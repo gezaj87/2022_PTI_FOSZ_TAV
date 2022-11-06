@@ -48,4 +48,14 @@ class Login extends Controller
         self::Get($respone);
         
     }
+
+    public static function Get($param = null)
+    {
+
+        self::View('Login',
+            [
+                'data' => $param
+            ]
+        );
+    }
 }
