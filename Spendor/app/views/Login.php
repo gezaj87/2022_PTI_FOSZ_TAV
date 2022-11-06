@@ -1,6 +1,6 @@
 <h3>Bejelentkezés</h3>
 <?php 
-    if ($data['data']['validation_success'] && $data['data']['database_success'])
+    if ($data['data']['database_success'])
     {
       echo "Sikeres bejelentkezés!";
     }
