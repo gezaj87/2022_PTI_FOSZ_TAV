@@ -6,8 +6,19 @@
     }
     else echo($data['data']['message']);
 ?>
-<form method="POST" action="login">
-  <p>Email: <input type="email" name="email" required /></p>
-  <p>Password: <input type="password" name="password" required /></p>
-  <button type="submit">Bejelentkezés</button>
-</form>
+<div class="container">
+    <div class="row">
+        <div class="auto-col d-flex justify-content-center">
+             <div class="content">
+                <form class="bejelentkezes" action="login">
+                    <label class="bejelentkezesCimke" for="bejelentkezesEmail_id">E-mail cím </label>
+                    <input type="email" id="bejelentkezesEmail_id" required><br>                            
+                    <label class="bejelentkezesCimke" for="bejelentkezesJelszo_id">Jelszó </label>
+                    <input type="password" id="bejelentkezesJelszo_id" required><br>
+                    <input type="submit" class="bejelentkezesGombok" id="bejelentkezes" value="Bejelentkezés">
+                    <input type="button" class="bejelentkezesGombok" id="beregisztralas" value="Regisztráció">                      
+                </form>                            
+            </div>
+        </div>             
+    </div>
+</div> 
