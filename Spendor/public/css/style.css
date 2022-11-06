@@ -86,14 +86,17 @@ a{
     margin-right: 50px;
     margin-bottom: 0px;
 }
+
+/*Form textboxok/dropbox hossza*/
+label, select, #datum_id, #modositTetelDatum, #regisztracioSzulDatum_id{    
+    width: 189px; 
+}
+
 /*textboxok közti távolság*/
 input,select{
     margin-bottom: 1px;
 }
-/*Form textboxok/dropbox hossza*/
-label:not(.datum), select, #datum_id, #modositTetelDatum{    
-    width: 190px; 
-}
+
 /*Form gomb színek*/
 .regisztracioGombok, .bejelentkezesGombok, .rogzites, .alapHelyzet, .modositasGombok, .felhasznaloModositGombok{
     margin-top: 33px;
