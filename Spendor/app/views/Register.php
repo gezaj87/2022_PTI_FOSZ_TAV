@@ -28,7 +28,7 @@
                     <label class="regisztracioCimke" for="regisztracioSzulDatum_id">Születési dátum</label>
                     <input type="date" id="regisztracioSzulDatum_id" name="date" required><br>                         
                     <label class="regisztracioCimke" for="regisztracioTel_id">Telefonszám</label>
-                    <input type="tel" id="regisztracioTel_id" pattern="[0]{1}[0-9]{10}" placeholder="201234567" name="phone"><br>
+                    <input type="tel" id="regisztracioTel_id" pattern="[0]{1}[0-9]{10}" placeholder="06203050856" name="phone"><br>
                     <input type="submit" class="regisztracioGombok" id="regRegisztralas" value="Regisztráció">
                     <input type="button" class="regisztracioGombok" id="megse" value="Mégse">
                  </form>
