@@ -4,13 +4,14 @@ class Login extends Controller
 {
 
     const INPUT_MISSING = "Nincs minden mező kitöltve!";
-    const INCORRECT_PASSWORD = "A megadott jelszó nem megfelelő!";
+    const INCORRECT_PASSWORD = "A megadott jelszó, vagy email nem megfelelő!";
+    const EMAIL_NOT_FOUND = "A megadott e-mail nem található!";
+    const LOGIN_SUCCESS = "Sikeres bejelentkezés!";
 
     public static function Post()
     {
 
         $respone = [
-            'validation_success' => true,
             'database_success' => true
             'message' => '',
         ];
@@ -25,19 +26,23 @@ class Login extends Controller
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            $sql = "select jelszo from felhasznalok where email = '". $email ."'";
-            $hashed_password = Database::SQL($sql, [password_verify($password, $sql['jelszo']])
-        }
-        catch (Exception $e)
-        {
-            $respone['validation_success'] = false;
-            $respone['message'] = $e->getMessage();
-        }
+            $sql = "select * from felhasznalok where email = ?";
+            $user = Database::SQL($sql, [$email])->fetch_assoc();
 
-        try
-        {
-            $sql = "select nev, email, szuldatum, telefonszam from felhasznalok where email = '". $email ."' AND '". $hashed_password ."'";
-            Database::SQL($sql, [])
+            if (!$user)
+            {
+                throw new Exception(self::EMAIL_NOT_FOUND);
+            }
+
+            if (!password_verify($password, $user['jelszo'])) 
+            {
+                throw new Exception(self::INCORRECT_PASSWORD);
+            }
+            
+            $_SESSION['token'] = md5(uniqid(mt_rand(), true));
+            $_SESSION['user'] = $user;
+            
+            $respone['message'] = self::LOGIN_SUCCESS;
         }
         catch (Exception $e)
         {
