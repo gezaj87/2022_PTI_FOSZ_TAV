@@ -5,10 +5,18 @@ class Home extends Controller
 
     public static function Start($param = null)
     {
+        $go_to = 'Login';
+        $data_to_frontend = '';
 
-        self::View('Home',
+        if (isset($_SESSION['token']))
+        {
+            $go_to = 'Home';
+            $data_to_frontend = $_SESSION['user'];
+        }
+
+        self::View($go_to,
             [
-                'teszt' => 'Data to Frontend'
+                'data' => $data_to_frontend
             ]
         );
     }

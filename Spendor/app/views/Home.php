@@ -1,2 +1,2 @@
 <p><b>Home.php</b></p>
-<p><?=$data['teszt']?></p>
+<p><?=print_r($data['data']) ?></p>
