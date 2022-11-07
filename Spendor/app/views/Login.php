@@ -15,11 +15,11 @@
     <div class="row">
         <div class="auto-col d-flex justify-content-center">
              <div class="content">
-                <form class="bejelentkezes" action="login">
+                <form class="bejelentkezes" method="POST" action="login">
                     <label class="bejelentkezesCimke" for="bejelentkezesEmail_id">E-mail cím </label>
-                    <input type="email" id="bejelentkezesEmail_id" required><br>                            
+                    <input type="email" id="bejelentkezesEmail_id" name="email" required><br>                            
                     <label class="bejelentkezesCimke" for="bejelentkezesJelszo_id">Jelszó </label>
-                    <input type="password" id="bejelentkezesJelszo_id" required><br>
+                    <input type="password" id="bejelentkezesJelszo_id" name="password" required><br>
                     <input type="submit" class="bejelentkezesGombok" id="bejelentkezes" value="Bejelentkezés">
                     <input type="button" class="bejelentkezesGombok" id="beregisztralas" value="Regisztráció">                      
                 </form>                            
