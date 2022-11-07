@@ -17,8 +17,8 @@ class App
         $Router->Get('/', [Home::class, 'Start']);
         $Router->Get('/register', [Register::class, 'Get']);
         $Router->Post('/register', [Register::class, 'Post']);
-        $Router->Get('/login', [Register::class, 'Get']);
-        $Router->Post('/login', [Register::class, 'Post']);
+        $Router->Get('/login', [Login::class, 'Get']);
+        $Router->Post('/login', [Login::class, 'Post']);
 
         if (!isset($_SESSION['router']) || !$_SESSION['router'])
         {

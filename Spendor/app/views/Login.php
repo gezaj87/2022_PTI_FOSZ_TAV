@@ -1,10 +1,15 @@
 <h3>Bejelentkezés</h3>
 <?php 
-    if ($data['data']['database_success'])
+
+    if (isset($data['data']['database_success']))
     {
-      echo "Sikeres bejelentkezés!";
+        if ($data['data']['database_success'])
+        {
+            echo "Sikeres bejelentkezés!";
+        }
+        else echo($data['data']['message']);
     }
-    else echo($data['data']['message']);
+    
 ?>
 <div class="container">
     <div class="row">
