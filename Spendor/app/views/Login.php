@@ -21,7 +21,7 @@
                     <label class="bejelentkezesCimke" for="bejelentkezesJelszo_id">Jelszó </label>
                     <input type="password" id="bejelentkezesJelszo_id" name="password" required><br>
                     <input type="submit" class="bejelentkezesGombok" id="bejelentkezes" value="Bejelentkezés">
-                    <input type="button" class="bejelentkezesGombok" id="beregisztralas" value="Regisztráció">                      
+                    <input type="button" class="bejelentkezesGombok" id="beregisztralas" value="Regisztráció" onclick="location.href='http://localhost/Spendor/register';">                   
                 </form>                            
             </div>
         </div>             
