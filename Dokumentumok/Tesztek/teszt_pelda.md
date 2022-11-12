@@ -6,9 +6,11 @@
 
   
 
-|ID| Megnevezés | Tesztelő neve | Funkció leírása | Elvárt eredmény | Eredmény | Megfelelősségi státusz |
-|---| ---------------------------------------- | ------------- | --------------- | --------------- | -------- | ---------------------- |
-|[1](#1-ID-teszt)| GUI tesztelése|Orosz Norbert|Regisztráció mégse gomb | Átirányítás|Nem irányít át |Javítás kell	|
+|ID| Megnevezés | Tesztelő neve | Funkció leírása | Elvárt eredmény | Eredmény | Megfelelősségi státusz | Javítva
+|-------| --------------| ------------|------------------------|------------|---------------|---------------|----|
+|[1](#1)| GUI tesztelése|Orosz Norbert|Regisztráció mégse gomb | Átirányítás|Nem irányít át |Nem felelt meg	|Igen|
+
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ultrices nibh. Maecenas hendrerit arcu eu purus condimentum laoreet. Cras lectus arcu, aliquet in aliquam id, sollicitudin sed nisi. Nam feugiat odio at risus tempus congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris eget mi tincidunt, tempus mi sed, molestie ante. Praesent nulla nibh, cursus a tempor in, elementum vitae nulla. Donec varius metus in egestas semper. Donec consectetur volutpat dui eget sodales. Fusce volutpat ex a leo iaculis hendrerit. Quisque viverra sem vel elit dictum vulputate. Phasellus iaculis posuere arcu et viverra. Phasellus tincidunt nisl nec felis rhoncus eleifend at eu orci. Sed porta tellus mauris, eu interdum massa lobortis et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sed ante et augue imperdiet gravida.
 
@@ -23,8 +25,13 @@ Nullam at dolor vitae purus bibendum molestie. Suspendisse eleifend ultrices pur
 Duis id diam vel dui consequat pellentesque eget sit amet massa. Nunc quis purus accumsan, auctor ipsum eget, finibus elit. Donec viverra iaculis lacus sit amet consequat. Donec ullamcorper tortor odio, vel pretium tortor tincidunt in. Integer sagittis nibh eget leo vulputate pellentesque. Maecenas sed porta lacus. Aenean a dignissim erat. Nullam dignissim venenatis nulla, eget accumsan dolor porttitor at.
 
 Proin ac metus in ligula sagittis aliquam. Curabitur at diam sit amet justo interdum blandit non in ex. Nunc a ex a lectus commodo varius. Curabitur vel mollis magna, ac iaculis sem. Suspendisse efficitur quis urna nec suscipit. Aliquam erat volutpat. Curabitur scelerisque purus bibendum, tincidunt arcu in, sagittis tellus. Curabitur ornare lorem sed turpis finibus, ac aliquam enim dapibus. Aenean scelerisque mauris dui, ac pretium ligula volutpat nec. Maecenas velit nibh, congue in sollicitudin facilisis, maximus a purus. Vestibulum fringilla sagittis nunc, vitae vehicula elit imperdiet ac. Nulla cursus tortor et ligula vehicula, aliquam consequat nulla porta. Pellentesque congue tincidunt lorem sed fringilla. Nunc facilisis libero ac nunc hendrerit fermentum. Fusce fringilla ac mauris et tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-  
 
 
-###  1 ID teszt
-Magyarázat: teszt
+
+
+###  1
+**Rövid leírás**:  Regisztráció mégse gomb
+**Elvárt működés**:  Register.php oldalon, ha a felhasználó a regisztrálásban meggondolja magát, akkor a mégse gomb megnyomásával visszairányításra kerül a felhasználó a Login.php oldalra.
+**Jelenlegi működés** Register.php oldalon, nincs implementálva a mégse gomb.
+**Megfelelősségi státusz**: Nem felelt meg
+**Javíta**: igen
