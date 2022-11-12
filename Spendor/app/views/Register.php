@@ -30,7 +30,7 @@
                     <label class="regisztracioCimke" for="regisztracioTel_id">Telefonszám</label>
                     <input type="tel" id="regisztracioTel_id" pattern="[0]{1}[0-9]{10}" placeholder="06203050856" name="phone"><br>
                     <input type="submit" class="regisztracioGombok" id="regRegisztralas" value="Regisztráció">
-                    <input type="button" class="regisztracioGombok" id="megse" value="Mégse" onclick="location.href='http://localhost/Spendor/';">
+                    <input type="button" class="regisztracioGombok" id="megse" value="Mégse" onclick="location.href='login';">
                  </form>
             </div>
         </div>
