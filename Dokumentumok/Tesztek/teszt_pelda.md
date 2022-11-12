@@ -12,8 +12,8 @@
 
 
 ###  1
-**Rövid leírás**:  Regisztráció mégse gomb
-**Elvárt működés**:  Register.php oldalon, ha a felhasználó a regisztrálásban meggondolja magát, akkor a mégse gomb megnyomásával visszairányításra kerül a felhasználó a Login.php oldalra.
-**Jelenlegi működés** Register.php oldalon, nincs implementálva a mégse gomb.
-**Megfelelősségi státusz**: Nem felelt meg
-**Javíta**: igen
+- **Rövid leírás**:  Regisztráció mégse gomb
+- **Elvárt működés**:  Register.php oldalon, ha a felhasználó a regisztrálásban meggondolja magát, akkor a mégse gomb megnyomásával visszairányításra kerül a felhasználó a Login.php oldalra.
+- **Jelenlegi működés** Register.php oldalon, nincs implementálva a mégse gomb.
+- **Megfelelősségi státusz**: Nem felelt meg
+- **Javíta**: igen
