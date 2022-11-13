@@ -6,6 +6,8 @@
         if ($data['data']['database_success'])
         {
             echo "Sikeres bejelentkezés!";
+            $url = explode('/', $_SERVER['REQUEST_URI']);
+            header('Location: http://'.$_SERVER['HTTP_HOST'].'/'.$url[1]);
         }
         else echo($data['data']['message']);
     }
