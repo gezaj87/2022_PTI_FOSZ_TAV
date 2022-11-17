@@ -1,11 +1,13 @@
 # Rendszerterv
 
 ## 1. A rendszer célja
+
 A rendszer célja, hogy a felhasználók képesek legyenek gyorsan és kényelmesen rögzíteni kiadásaikat, ezáltal nyomon követve azokat. A rendszernek nem célja a bevételek figyelése, így kizárólag a kiadásokról ad tájékoztatást.
 
 ## 2. Projekt terv
 
 ### 2. 1 Projektszerepkörök, felelősségek
+
 A rendszer létrehozásához rendelkezésre álló erőforrások kezelése a GitHub felületen történik. Az alpontokban találhatóak a projektmunkások és felelősségeik, valamint az ütemterv és mérföldkövek.
 
 ### 2.2 Projektmunkások és felelősségeik
@@ -13,8 +15,8 @@ A rendszer létrehozásához rendelkezésre álló erőforrások kezelése a Git
 **Frontend:**
 | Projektmunkások |
 | --------------- |
-| Orosz Norbert   |
-| Poglár Gábor    |
+| Orosz Norbert |
+| Poglár Gábor |
 
 | Felelősségek                                    |
 | ----------------------------------------------- |
@@ -24,8 +26,8 @@ A rendszer létrehozásához rendelkezésre álló erőforrások kezelése a Git
 **Backend:**
 | Projektmunkások |
 | --------------- |
-| Jóni Géza       |
-| Tóth Levente    |
+| Jóni Géza |
+| Tóth Levente |
 
 | Felelősségek                       |
 | ---------------------------------- |
@@ -35,16 +37,17 @@ A rendszer létrehozásához rendelkezésre álló erőforrások kezelése a Git
 **Tesztelés:**
 | Projektmunkások |
 | --------------- |
-| Poglár Gábor    |
-| Orosz Norbert   |
-| Tóth Levente    |
-| Jóni Géza       |
+| Poglár Gábor |
+| Orosz Norbert |
+| Tóth Levente |
+| Jóni Géza |
 
 | Felelősségek                                         |
 | ---------------------------------------------------- |
 | A szoftverekben meglévő esetleges hibák felderítése. |
 
 ### 2.3 Ütemterv
+
 | Funkció                   | Feladat                                    |
 | ------------------------- | ------------------------------------------ |
 | Követelmény specifikáció  | Követelmény specifikáció elkészítése       |
@@ -57,6 +60,7 @@ A rendszer létrehozásához rendelkezésre álló erőforrások kezelése a Git
 | Honlap                    | Rendszer tesztelése                        |
 
 ### 2.4 Mérföldkövek
+
 | Időpont    | Mérföldkő                                |
 | ---------- | ---------------------------------------- |
 | 2022.09.18 | Projektmunkák és felelősségeik kiosztása |
@@ -64,12 +68,15 @@ A rendszer létrehozásához rendelkezésre álló erőforrások kezelése a Git
 | 2022.11.30 | Elkészült projekt átadása                |
 
 ## 3. Üzleti folyamatok modellje
+
 A rendszert nem lehet regisztrálás nélkül használni. A látogató a kezdőoldalt képes elérni és azon keresztül bejelentkezni, vagy regisztrálni a rendszerbe. A bejelentkezett felhasználó képes új tételeket hozzáadni a meglévőköz, vagy a meglévőket lekérdezni, valamint dátum szerint szűrni azokat.
 
 ### 3.1 Üzleti szereplők
+
 A bejelentkezés minden felhasználó számára egységesen a következő: A főoldalra lépve megjelenik a ’Email’ és ’Jelszó’ beviteli űrlap. A mezők kitöltése után a ’Belépés’ gombra kattintva tud bejelentkezni a felhasználó. Ha az azonosítás sikeres, akkor a felhasználó belépett és megjelenik a jogosultságának megfelelő felület. Ha sikertelen az azonosítás, hibaüzenet jelenik meg.
 
 ### 3.2 Üzleti folyamatok
+
 Üzleti folyamatok a felhasználók számára:
 
 **Felhasználói adatok megjelenítése**
@@ -120,6 +127,7 @@ A bejelentkezés minden felhasználó számára egységesen a következő: A fő
 ## 4. Követelmények
 
 **Regisztrált felhasználók lehetőségei**
+
 - Regisztrációs adatok módosítása
 - Regisztráció törlése
 - Új kiadás rögzítése
@@ -129,6 +137,7 @@ A bejelentkezés minden felhasználó számára egységesen a következő: A fő
 - Statisztikai információk, digrammok megtekintése
 
 **Adminisztrátorok lehetőségei**
+
 - Bejelentkezési adatok módosítása (e-mail és jelszó)
 - Adminisztrátor hozzáadás
 - Adminisztrátorok és Felhasználók törlése
@@ -150,7 +159,6 @@ A rendszer használatához mindenképpen szükséges egy előzetes regisztráci�
   - PHP futtatói környezet
   - FTP vagy Shell hozzáférési lehetőség
 
-
 **Törvényi előírások, szabványok**
 
 `Szerzői jogi törvény (1999. évi LXXVI. törvény; röviden: Szjt.), illetve a 2016. évi XCIII. törvény A szerzői jogok és a szerzőijoghoz kapcsolódó jogok közös kezeléséről`
@@ -168,9 +176,10 @@ A rendszer használatához mindenképpen szükséges egy előzetes regisztráci�
 `ISO / IEC 15504 Információs technológia — folyamatértékelés, más néven a szoftverfolyamat-fejlesztési képesség meghatározása (SPICE), "a szoftverfolyamatok értékelésének kerete".`
 
 ## 5. Funkcionális terv
+
 ### 5.1 Rendszerszereplők
 
-A rendszer használatához mindenképpen szükséges regisztrálni az oldalon keresztül. 
+A rendszer használatához mindenképpen szükséges regisztrálni az oldalon keresztül.
 A rendszerbe regisztrált felhasználó képes új tételeket hozzáadni és ehhez kategóriát hozzá rendelni, meglévő tételeket módosítani, valamint törölni azokat. Ezeken kívül lehetőség van szűrni is meglévő tételeket.
 
 ### 5.2 Rendszerhasználati esetek és lefutásaik
@@ -204,10 +213,12 @@ A rendszerbe regisztrált felhasználó képes új tételeket hozzáadni és ehh
 ### 5.4 Menühierarchiák
 
 **Elérhető funkciók regisztráció nélkül:**
+
 - Bejelentkezés
 - Regisztráció
 
 **Elérhető funkciók regisztrációval:**
+
 - Új tétel rögzítése
 - Tételek megjelenítése
 - Tételek szűrése
@@ -216,23 +227,32 @@ A rendszerbe regisztrált felhasználó képes új tételeket hozzáadni és ehh
 
 ## 6. Fizikai környezet
 
-### Platformok
+### 6.1 Platformok
+
 - PHP 8.1
 - MySQL 8.0
 - JavaScript 1.5
 - HTML 5
-### Vásárolt softwarekomponensek és külső rendszerek
+
+### 6.2 Vásárolt softwarekomponensek és külső rendszerek
+
 - Nincsenek vásárolt szoftverkomponensek.
 - Ingyenes szoftverkomponensek:
-    - Bootstrap CSS framework
-    - Chart.js javascript library diagram készítéshez 
-### Hardver és hálózati topológia
+  - Bootstrap CSS framework
+  - Chart.js javascript library diagram készítéshez
+
+### 6.3 Hardver és hálózati topológia
+
 Az alkalmazás webplatformra készül. Bármely operációs rendszerrel kompatibilis.
-### Fizikai alrendszerek
+
+### 6.4 Fizikai alrendszerek
+
 Webszerver: 80-as porton elérhető HTTP szolgáltatás
 MySQL adatbázis szerver.
 A böngésző rendszerkövetelményeinek megfelelő kliens
-### Fejlesztő eszközök
+
+### 6.5 Fejlesztő eszközök
+
 Visual Studio Code, Apache NetBeans, MySQL Workbench, Github
 
 ## 7. Absztrakt domain modell
@@ -256,23 +276,32 @@ A felhasználó képes létrehozni tételeket, ahol a tételeknek meg tud adni e
 Egy falhasználóhoz több kategória is tartozhat, de egy tételnek csak egy kategóriája lehet.
 
 ## 8. Architekturális terv
+
 A Backend PHP programozási nyelven készül OOP alapokon. A készítés során az MVC (model-view-controller) programtervezési minta érvényesül.
 
 A Frontend HTML, CSS, Javascript és PHP programozási nyelveken készül.
 A weboldal felépítése elkülönül Header (fejléc), Navigation (navigáció), Content (tartalom) és Footer (lábléc) szegmensekre a könnyebb átláthatóság és a későbbi fejlesztések megkönnyítése érdekében.
-###### Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
-A felhasználó webböngészőn, HTML oldalakon keresztül tud navigalni. A CRUD műveletek HTTP GET és POST metódus formájában kerülnek átadásra szerver-kliens és kliens-szerver relációban, amiket aztán MySQL adatbázisban írunk és olvasunk. 
+
+### 8.1 Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
+
+A felhasználó webböngészőn, HTML oldalakon keresztül tud navigalni. A CRUD műveletek HTTP GET és POST metódus formájában kerülnek átadásra szerver-kliens és kliens-szerver relációban, amiket aztán MySQL adatbázisban írunk és olvasunk.
 A weboldal egy Apache webszerveren fut.
-###### Változások kezelése
+
+### 8.2 Változások kezelése
+
 A változások a szerver oldalon történnek, ezért a kliens oldalon a felhasználónak nincs tennivalója a változások kezelésére.
-###### Rendszer bővíthetősége
+
+### 8.3 Rendszer bővíthetősége
+
 A rendszer bővíthető több szervergép csatlakoztatása esetén.
 Vékony kliens oldalon nincs szükség beavatkozásra.
-###### Biztonsági funkciók
+
+### 8.4 Biztonsági funkciók
+
 CSRF TOKEN (cross-site request forgery) implementálása.
 Bejelentkezéskor a hitelesítés után a szerver készít kriptográfiai algoritmussal egy egyedi TOKEN-t, melyet elment a PHP seassion-ben. Amikor a felhasználó a kliens oldalon védett tartalmat kíván megtekinteni, a PHP ellenőrizni fogja a TOKEN jelenlétét, hitelességét. Ez garantálja, hogy a kérés a weboldalon keresztük, a kliens böngészőjében történik.
 
-# 9. Adatbázisterv
+## 9. Adatbázisterv
 
 **Felhasználók tábla**
 
@@ -307,15 +336,15 @@ Bejelentkezéskor a hitelesítés után a szerver készít kriptográfiai algori
 | Dátum          | A tétel létrehozásának dátuma               |                  |
 | Valid          | A tétel érvényessége a rendszerben          |                  |
 
-## 9.1 Logikai adatmodell
+### 9.1 Logikai adatmodell
 
 ![Logikai adatmodell](PNG/rendszerterv.adatbazisterv.logikai-adatmodell.png)
 
-## 9.2 Egyed-Kapcsolat diagram
+### 9.2 Egyed-Kapcsolat diagram
 
 ![Egyed-Kapcsolat diagram](PNG/rendszerterv.adatbazisterv.egyed-kapcsolat-diagram.png)
 
-## 9.3 Fizikai adatmodellt legeneráló szkriptek
+### 9.3 Fizikai adatmodellt legeneráló szkriptek
 
 **Adatbázis létrehozása**
 
@@ -394,12 +423,19 @@ CONSTRAINT `kategoria` FOREIGN KEY (`id`) REFERENCES `kategoriak` (`id`));
 ```
 
 ## 10. Implementációs terv
+
 A felhasználó webböngészőn keresztül éri el a vékony klienst, vagyis a weboldalakat. Ezek a weboldalak HTML, CSS, JavaScript programozási nyelvekben készülnek. Az adatokat MySQL adatbázis szerveren tárolódnak, melyet az üzleti logika rétegében futó PHP program kapcsol össze a GUI felülettel.
-###### Perzisztencia (adatbázis osztály)
+
+### 10.1 Perzisztencia (adatbázis osztály)
+
 MySQL adatbázis szerver
-###### Üzleti logika osztályai
+
+### 10.2 Üzleti logika osztályai
+
 Webszerveren futó PHP program
-###### Kliens oldal osztályai
+
+### 10.3 Kliens oldal osztályai
+
 HTML, CSS, JavaScript
 
 ## 11. Tesztterv
@@ -414,7 +450,7 @@ A fejlesztés és a programkód változások során szükséges a metódusokat �
 
 ### 11.2 A rendszerbe lépés tesztelése:
 
-Amikor a rendszerhez hozzákapcsolunk egy új komponenst, akkor meg kell győződni, hogy minden az igényeknek megfelelően működik. Az adatok áramlásának követése több komponens között. 
+Amikor a rendszerhez hozzákapcsolunk egy új komponenst, akkor meg kell győződni, hogy minden az igényeknek megfelelően működik. Az adatok áramlásának követése több komponens között.
 
 ### 11.3 Biztonsági teszt:
 
@@ -428,79 +464,92 @@ Meg kell győződni arról, hogy a felhasználói felület megfelel-e a képerny
 
 Admin jogosultság nélküli felhasználó szimulálása, annak érdekében, hogy a végfelhasználók szemszögéből lássák a program működését a tesztelők, most a fejlesztők is.
 
-#### 11.5.1 Bejelentkezési felület:
+**Bejelentkezési felület:**
+
 A felhasználó be tud-e jelentkezni.
 
-###### Mezők:
-E-mail cím: e-mail típus.Kötelező kitölteni.
-Kötelező kitölteni.
-Jelszó: password típus. Kötelező kitölteni.
+Mezők:
+
+- E-mail cím: e-mail típus.Kötelező kitölteni.
+- Jelszó: password típus. Kötelező kitölteni.
 
 Regisztrációs felület:
-###### Mezők:
-E-mail cím: e-mail típus.Kötelező kitölteni.
-Jelszó: password típus. Kötelező kitölteni.
-Jelszó újra: password típus és meg kell egyeznie a Jelszó mező értékkel.  Kötelező kitölteni.
-Telefonszám: tel típus.  Kötelező kitölteni.
 
-#### 11.5.2 Főoldal:
+Mezők:
 
-###### Navigáció:
-Új tétel hozzáadása: átirányítás az ujtetel.html-re.
-Tételek megtekintése: átirányítás a tetelek.html-re.
-Kijelentkezés: Kijelentkezteti a felhasználót.
-Grafikon helyes működésének ellenőrzése.
+- E-mail cím: e-mail típus.Kötelező kitölteni.
+- Jelszó: password típus. Kötelező kitölteni.
+- Jelszó újra: password típus és meg kell egyeznie a Jelszó mező értékkel. Kötelező kitölteni.
+- Telefonszám: tel típus. Kötelező kitölteni.
 
-###### Mezők és lapozó:
-Dátum-tól: Dátum típus. Nem kötelező a kitöltés
-Dátum-ig: Dátum típus. Nem kötelező a kitöltés
-Lapozási funkció működése.
+**Főoldal:**
 
-#### 11.5.3 Új tétel hozzáadása:
+Navigáció:
 
-###### Navigáció:
-Főoldal: átirányítás a fooldal.html-re
-Tételek megtekintése: átirányítás a tetelek.html-re
-Kijelentkezés: Kijelentkezteti a felhasználót.
+- Új tétel hozzáadása: átirányítás az ujtetel.html-re.
+- Tételek megtekintése: átirányítás a tetelek.html-re.
+- Kijelentkezés: Kijelentkezteti a felhasználót.
+- Grafikon helyes működésének ellenőrzése.
 
-###### Mezők:
-Kategória: Az adatbázisban szereplő kategóriák. Dropbox típus. Kötelező kitölteni.
-Megnevezés: Speciális karakter nem elfogadott. Text típus. Kötelező kitölteni.
-Összeg Ft-ban: Number típus, vagyis csak a számok elfogadottak. Kötelező kitölteni.
-Dátum: Dátum típus. A tételhez tartozó időpontot kell rögzíteni. Kötelező kitölteni.
+Mezők és lapozó:
 
-###### Gombok:
-Rögzítés: Rögzíti a tételt.
-Törlés: Kitörli az eddig kitöltött mezőket.
+- Dátum-tól: Dátum típus. Nem kötelező a kitöltés
+- Dátum-ig: Dátum típus. Nem kötelező a kitöltés
+- Lapozási funkció működése.
 
-#### 11.5.4 Tételek megtekintése:
+**Új tétel hozzáadása:**
 
-###### Navigáció:
-Főoldal: átirányítás a fooldal.html-re
-Új tétel hozzáadása: átirányítás az ujtetel.html-re
-Kijelentkezés: Kijelentkezteti a felhasználót.
+Navigáció:
 
-###### Műveletek és lapozó:
-Módosítás: átirányítás a modosit.html-re.
-Törlés: Kitörli az adott tételt.
-Lapozási funkció működése.
- 
-#### 11.5.5 Tétel módosítása:
+- Főoldal: átirányítás a fooldal.html-re
+- Tételek megtekintése: átirányítás a tetelek.html-re
+- Kijelentkezés: Kijelentkezteti a felhasználót.
 
-###### Navigáció:
-Főoldal: átirányítás a fooldal.html-re
-Tételek megtekintése: átirányítás a tetelek.html-re
-Kijelentkezés: Kijelentkezteti a felhasználót.
+Mezők:
 
-###### Mezők:
-Kategória: Az adatbázisban szereplő kategóriák. Dropbox típus. Kötelező kitölteni.
-Megnevezés: Speciális karakter nem elfogadott. Text típus. Kötelező kitölteni.
-Összeg Ft-ban: Number típus, vagyis csak a számok elfogadottak. Kötelező kitölteni.
-Dátum: Dátum típus. A tételhez tartozó időpontot kell rögzíteni. Kötelező kitölteni.
+- Kategória: Az adatbázisban szereplő kategóriák. Dropbox típus. Kötelező kitölteni.
+- Megnevezés: Speciális karakter nem elfogadott. Text típus. Kötelező kitölteni.
+- Összeg Ft-ban: Number típus, vagyis csak a számok elfogadottak. Kötelező kitölteni.
+- Dátum: Dátum típus. A tételhez tartozó időpontot kell rögzíteni. Kötelező kitölteni.
 
-###### Gombok:
-Módosítás: Módosítja az adatbázisban meglévő adatokat, az új bevitt adatokra.
-Mégse: Visszairányít a tetelek.html-re.	
+Gombok:
+
+- Rögzítés: Rögzíti a tételt.
+- Törlés: Kitörli az eddig kitöltött mezőket.
+
+**Tételek megtekintése:**
+
+Navigáció:
+
+- Főoldal: átirányítás a fooldal.html-re
+- Új tétel hozzáadása: átirányítás az ujtetel.html-re
+- Kijelentkezés: Kijelentkezteti a felhasználót.
+
+Műveletek és lapozó:
+
+- Módosítás: átirányítás a modosit.html-re.
+- Törlés: Kitörli az adott tételt.
+- Lapozási funkció működése.
+
+**Tétel módosítása:**
+
+Navigáció:
+
+- Főoldal: átirányítás a fooldal.html-re
+- Tételek megtekintése: átirányítás a tetelek.html-re
+- Kijelentkezés: Kijelentkezteti a felhasználót.
+
+Mezők:
+
+- Kategória: Az adatbázisban szereplő kategóriák. Dropbox típus. Kötelező kitölteni.
+- Megnevezés: Speciális karakter nem elfogadott. Text típus. Kötelező kitölteni.
+- Összeg Ft-ban: Number típus, vagyis csak a számok elfogadottak. Kötelező kitölteni.
+- Dátum: Dátum típus. A tételhez tartozó időpontot kell rögzíteni. Kötelező kitölteni.
+
+Gombok:
+
+- Módosítás: Módosítja az adatbázisban meglévő adatokat, az új bevitt adatokra.
+- Mégse: Visszairányít a tetelek.html-re.
 
 ### 11.6 Határidők:
 
@@ -512,7 +561,6 @@ Mégse: Visszairányít a tetelek.html-re.
 | Biztonsági teszt                         | Funkció implementálása után        | 2022.11.07 |
 | Általános felhasználóként való tesztelés | Összes implementált komponens után | 2022.11.22 |
 | Végső tesztelés                          | Átadás előtti pillanat             | 2022.12.05 |
-
 
 ### 11.7 Jegyzőkönyv:
 
@@ -527,26 +575,30 @@ Mégse: Visszairányít a tetelek.html-re.
 | Biztonsági teszt                         |               |                 |                 |          |                        |
 | Általános felhasználóként való tesztelés |               |                 |                 |          |                        |
 | Általános felhasználóként való tesztelés |               |                 |                 |          |                        |
-| Végső tesztelés                          |               |                 |                 |          |                        |	
+| Végső tesztelés                          |               |                 |                 |          |                        |
 
 ## 12. Telepítési terv
+
 ### 12.1. Szerver oldalon
+
 1. Windows, Linux vagy macOS operációs rendszer telepítése
 2. Hálózati, Internet beállítások
-3. MySQL telepítés, konfigurálás: 
-    - Alapértelmezett 3306-os port használata
-    - Jogosultságok beállítása
-    - Táblák feltöltése
+3. MySQL telepítés, konfigurálás:
+   - Alapértelmezett 3306-os port használata
+   - Jogosultságok beállítása
+   - Táblák feltöltése
 4. PHP telepítés, konfigurálás
 5. Apache webszerver telepítés, konfigurálás
 6. Tűzfal beállítások
 
 ### 12.2. Kliens oldalon
-Tetszőleges webkliens software telepítése
-Internethozzáférés
+
+- Tetszőleges webkliens software telepítése
+- Internethozzáférés
 
 ## 13. Karbantartási terv
+
 - Átfogó tesztelések 1-1 nagyobb webböngésző verzióváltása esetén.
-- Felhasználói panaszok kivizsgálása. 
+- Felhasználói panaszok kivizsgálása.
 - A rendszer üzemeltetői igényeinek kielégítése, új funkciók implementálása.
 - Időszakos adatbázis karbantartás, biztonsági mentések.
