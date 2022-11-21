@@ -7,13 +7,14 @@ class Expense
     private int $category_id;
     private int $amount;
     private int $user_id;
-    private DateTime $created_at;
+    private DateTime $date;
 
     private const INVALID_NAME = "A megnevezés 1 és 30 karakter között lehet!";
     private const NOT_POSITIVE_INTEGER = "A megadott érték nem pozitív egész szám!";
+    private const NOT_VALID_DATE = "A megadott dátum nem valós!";
 
 
-    public function __construct(string $name, int $category_id, int $amount, int $user_id, DateTime $created_at, $id = null)
+    public function __construct(string $name, int $category_id, int $amount, int $user_id, DateTime $date, $id = null)
     {
         if ($id)
         {
@@ -33,8 +34,9 @@ class Expense
         if (self::PositiveIntegerCheck($user_id)) $this->user_id = $user_id;
         else throw new Exception(self::NOT_POSITIVE_INTEGER);
 
-        $this->created_at = $created_at;
-
+        
+        if (self::DateCheck($date)) $this->date = $date;
+        else throw new Exception(self::NOT_VALID_DATE);
     }
 
     public function getId(): int
@@ -62,9 +64,9 @@ class Expense
         return $this->user_id;
     }
 
-    public function getCreated_at(): DateTime
+    public function getDate(): string
     {
-        return $this->created_at;
+        return $this->date->format('Y-m-d');
     }
 
     
@@ -93,6 +95,12 @@ class Expense
         }
     }
 
+    private static function DateCheck(DateTime $date): bool
+    {
+        $date_now = date_create("now");
+        if ($date_now > $date) return true;
+        else return false; 
+    }
 
 
 }
