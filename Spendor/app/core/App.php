@@ -20,6 +20,8 @@ class App
         $Router->Get('/login', [Login::class, 'Get']);
         $Router->Post('/login', [Login::class, 'Post']);
         $Router->Post('/logout', [Logout::class, 'Post']);
+        $Router->Get('/newexpense', [NewExpense::class, 'Get']);
+        $Router->Post('/newexpense', [NewExpense::class, 'Post']);
 
         if (!isset($_SESSION['router']) || !$_SESSION['router'])
         {
