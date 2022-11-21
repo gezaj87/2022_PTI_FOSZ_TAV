@@ -366,17 +366,19 @@ CREATE DATABASE IF NOT EXISTS ekke_proj_schema;
 | Valid           | Boolean  |       | 1         |
 
 ```sql
+CREATE DATABASE IF NOT EXISTS ekke_proj_schema;
+
 CREATE TABLE `ekke_proj_schema`.`felhasznalok` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nev` VARCHAR(100) NOT NULL,
-  `email` VARCHAR(60) NOT NULL,
   `jelszo` VARCHAR(60) NOT NULL,
+  `email` VARCHAR(60) NOT NULL,
+  `nev` VARCHAR(100) NOT NULL,
   `szuldatum` DATETIME NOT NULL,
   `telefonszam` VARCHAR(15) DEFAULT '0',
-  `admin` TINYINT NOT NULL DEFAULT 0,
   `valid` TINYINT NOT NULL DEFAULT 1,
-PRIMARY KEY (`id`),
-UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
+  `admin` TINYINT NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
 ```
 
 **Kategóriák tábla**
@@ -390,10 +392,10 @@ UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE);
 ```sql
 CREATE TABLE `ekke_proj_schema`.`kategoriak` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nev` varchar(40) NOT NULL,
+  `nev` varchar(30) NOT NULL,
   `valid` tinyint NOT NULL DEFAULT 1,
-PRIMARY KEY (`id`),
-UNIQUE KEY `nev_UNIQUE` (`nev`));
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `nev_UNIQUE` (`nev`));
 ```
 
 **Tételek tábla**
@@ -411,15 +413,15 @@ UNIQUE KEY `nev_UNIQUE` (`nev`));
 ```sql
 CREATE TABLE `ekke_proj_schema`.`tetelek` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `megnevezes` varchar(60) NOT NULL,
+  `megnevezes` varchar(30) NOT NULL,
   `kategoriaid` int NOT NULL,
   `osszeg` int NOT NULL,
   `felhasznaloid` int NOT NULL,
   `datum` datetime NOT NULL,
   `valid` tinyint NOT NULL DEFAULT '1',
-PRIMARY KEY (`id`),
-CONSTRAINT `felhasznalo` FOREIGN KEY (`id`) REFERENCES `felhasznalok` (`id`),
-CONSTRAINT `kategoria` FOREIGN KEY (`id`) REFERENCES `kategoriak` (`id`));
+  PRIMARY KEY (`id`),
+  CONSTRAINT `fk_tetelek_felhasznalo` FOREIGN KEY (`felhasznaloid`) REFERENCES `felhasznalok` (`id`),
+  CONSTRAINT `fk_tetelek_kategoria` FOREIGN KEY (`kategoriaid`) REFERENCES `kategoriak` (`id`);
 ```
 
 ## 10. Implementációs terv
