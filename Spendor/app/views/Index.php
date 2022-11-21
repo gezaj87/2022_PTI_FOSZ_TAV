@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link tetelRogzites hatter" href="ujtetel.html" >Új tétel hozzáadása</a>
+                            <a class="nav-link tetelRogzites hatter" href="newexpense" >Új tétel hozzáadása</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link megtekintes" href="tetelek.html" >Tételek megtekintése</a>

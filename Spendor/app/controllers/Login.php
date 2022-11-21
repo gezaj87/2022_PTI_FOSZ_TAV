@@ -3,7 +3,7 @@
 class Login extends Controller
 {
 
-    const INPUT_MISSING = "Nincs minden mező kitöltve!";
+    public const INPUT_MISSING = "Nincs minden mező kitöltve!";
     const INCORRECT_PASSWORD = "A megadott jelszó, vagy email nem megfelelő!";
     const EMAIL_NOT_FOUND = "A megadott e-mail nem található!";
     const LOGIN_SUCCESS = "Sikeres bejelentkezés!";
