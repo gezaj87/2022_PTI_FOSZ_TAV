@@ -1,14 +1,40 @@
 <p><b>Home.php</b></p>
-<p><?=print_r($data['data']) ?></p>
+
+
+<?php
+    print_r($data['data']['data_to_frontend']);
+    if (!$data['data']['database'])
+    {
+        $error_message = $data['data']['message'];
+        echo $error_message;
+    }
+
+    $expenses = $data['data']['data_to_frontend'];
+
+    if (count($expenses) == 0)
+    {
+        echo "Nincs megjelenítendő adat!";
+    }
+    
+
+    $firstDayOfMonth = new DateTime('now');
+    $firstDayOfMonth = $firstDayOfMonth->format('Y-m').'-01';
+
+    $lastDayOfMonth = new DateTime('now');
+    $lastDayOfMonth = $lastDayOfMonth->format('Y-m-t');
+
+    
+
+?>
 
 <div class="container-fluid">
     <div class="row tablazat justify-content-center">            
         <div class="col-auto content foTablazat">
             <form>
                 <label class="datum" for="datumtol">Dátum-tól</label>
-                <input type="date" id="datumtol">
+                <input type="date" id="datumtol" value="<?=$firstDayOfMonth?>">
                 <label class="datum" for="datumig">Dátum-ig</label>
-                <input type="date" id="datumig">
+                <input type="date" id="datumig" value="<?=$lastDayOfMonth?>">
             </form>
             <table class="table tablaTetelek">
                 <thead>
@@ -90,3 +116,9 @@
         </div>              
     </div>    
 </div>       
+
+
+<script>
+    const expenses = <?=json_encode($expenses)?>;
+    //console.log(expenses);
+</script>
