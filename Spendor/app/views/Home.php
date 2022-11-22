@@ -2,7 +2,6 @@
 
 
 <?php
-    print_r($data['data']['data_to_frontend']);
     if (!$data['data']['database'])
     {
         $error_message = $data['data']['message'];
