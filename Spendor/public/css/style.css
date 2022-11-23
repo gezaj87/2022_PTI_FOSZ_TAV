@@ -28,7 +28,7 @@ header{
 }
 
 /*Hover effekt a navbarban, módosítás, törlés*/
-.megtekintes:hover, .kijelentkezes:hover, .tetelRogzites:hover, .modositas:hover, .torles:hover, .profil:hover{
+.megtekintes:hover, .kijelentkezes:hover, .tetelRogzites:hover, .modositas:hover, .torles:hover, .profil:hover, .kepFoOldal:hover{
     cursor:pointer;
 }
 /*Betűméret változtatása*/
