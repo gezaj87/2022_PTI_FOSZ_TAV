@@ -31,16 +31,34 @@ class Home extends Controller
 
             try
             {
-                $query_str = "select id, megnevezes, kategoriaid, osszeg, felhasznaloid, date(datum) datum from tetelek where felhasznaloid = ? and datum between ? and ?";
+                // $query_str = "select id, megnevezes, kategoriaid, osszeg, felhasznaloid, date(datum) datum from tetelek where felhasznaloid = ? and datum between ? and ?";
 
+                $query_str = "SELECT t.megnevezes, k.nev kategorianev, t.osszeg, t.felhasznaloid, DATE(t.datum) datum ";
+                $query_str .= "FROM tetelek t ";
+                $query_str .= "INNER JOIN kategoriak k ON k.id = t.kategoriaid ";
+                $query_str .= "Where felhasznaloid = ? AND datum BETWEEN ? AND ?;";
                 $result = Database::SQL($query_str, [
                     $_SESSION['user']['id'],
                     $param['date_from'],
                     $param['date_to']
                 ])->fetch_all(MYSQLI_ASSOC);
 
+                $query_str2 = "SELECT k.nev kategorianev, SUM(t.osszeg) osszesen ";
+                $query_str2 .= "FROM tetelek t ";
+                $query_str2 .= "INNER JOIN kategoriak k ON k.id = t.kategoriaid ";
+                $query_str2 .= "WHERE felhasznaloid = ? AND datum BETWEEN ? AND ? ";
+                $query_str2 .= "GROUP BY k.nev;";
+                $result2 = Database::SQL($query_str2, [
+                    $_SESSION['user']['id'],
+                    $param['date_from'],
+                    $param['date_to']
+                ])->fetch_all(MYSQLI_ASSOC);
+
                 $response['database'] = true;
-                $response['data_to_frontend'] = $result;
+                $response['data_to_frontend'] = [
+                    'expenses' => $result,
+                    'total_amount_by_category' => $result2
+                ];
 
             }
             catch(Exception $e)
