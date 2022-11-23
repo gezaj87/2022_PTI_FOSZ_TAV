@@ -8,7 +8,9 @@
         echo $error_message;
     }
 
-    $expenses = $data['data']['data_to_frontend'];
+    $frontend_data = $data['data']['data_to_frontend'];
+    $expenses = $frontend_data['expenses'];
+    $total_amount_by_category = $frontend_data['total_amount_by_category'];
 
     if (count($expenses) == 0)
     {
@@ -119,5 +121,8 @@
 
 <script>
     const expenses = <?=json_encode($expenses)?>;
-    //console.log(expenses);
+    const totalAmountByCategory = <?=json_encode($total_amount_by_category)?>;
+
+    console.log(totalAmountByCategory);
+
 </script>
