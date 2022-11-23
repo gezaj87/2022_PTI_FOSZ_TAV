@@ -88,11 +88,11 @@
 </div>       
 
 <script src="Spendor/public/js/teszt.js"></script>
-<script>
-                const expenses = <?=json_encode($expenses)?>;
-                console.log(expenses[0].megnevezes);                
+<script>              
+                               
                 //metodusba átadni
                 const expenses = <?=json_encode($expenses)?>;
+                console.log(expenses);
                 const totalAmountByCategory = <?=json_encode($total_amount_by_category)?>;
                 console.log(totalAmountByCategory);
 </script> 
