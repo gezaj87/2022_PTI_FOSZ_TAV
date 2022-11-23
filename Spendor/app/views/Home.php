@@ -43,30 +43,7 @@
                     </tr>                                
                 </thead>
                 <tbody id="tesztTabla">
-                    <tr>
-                        <td class="hatter">Szorakozás</td>
-                        <td>Mozi</td>
-                        <td class="hatter">4 500</td>
-                        <td>2022.10.15</td>
-                    </tr>
-                    <tr>
-                        <td class="hatter">Szorakozás</td>
-                        <td>Mozi</td>
-                        <td class="hatter">4 500</td>
-                        <td>2022.10.15</td>
-                    </tr>
-                    <tr>
-                        <td class="hatter">Szorakozás</td>
-                        <td>Mozi</td>
-                        <td class="hatter">4 500</td>
-                        <td>2022.10.15</td>
-                    </tr>
-                    <tr>
-                        <td class="hatter">Szorakozás</td>
-                        <td>Mozi</td>
-                        <td class="hatter">4 500</td>
-                        <td>2022.10.15</td>
-                    </tr>
+                    
                 </tbody>
                 <tfoot>                                
                 </tfoot>                        
@@ -87,12 +64,12 @@
     </div>    
 </div>       
 
-<script src="Spendor/public/js/teszt.js"></script>
-<script>              
-                               
-                //metodusba átadni
+<script src="Spendor/public/js/functions.js"></script>
+<script>        
+                
                 const expenses = <?=json_encode($expenses)?>;
                 console.log(expenses);
                 const totalAmountByCategory = <?=json_encode($total_amount_by_category)?>;
                 console.log(totalAmountByCategory);
+                datas(expenses,totalAmountByCategory);
 </script> 
