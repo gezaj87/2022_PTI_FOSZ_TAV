@@ -1,6 +1,5 @@
 <p><b>Home.php</b></p>
 
-
 <?php
     if (!$data['data']['database'])
     {
@@ -15,14 +14,11 @@
         echo "Nincs megjelenítendő adat!";
     }
     
-
     $firstDayOfMonth = new DateTime('now');
     $firstDayOfMonth = $firstDayOfMonth->format('Y-m').'-01';
 
     $lastDayOfMonth = new DateTime('now');
-    $lastDayOfMonth = $lastDayOfMonth->format('Y-m-t');
-
-    
+    $lastDayOfMonth = $lastDayOfMonth->format('Y-m-t');    
 
 ?>
 
@@ -44,7 +40,7 @@
                         <th scope="col">Dátum</th>
                     </tr>                                
                 </thead>
-                <tbody>
+                <tbody id="tesztTabla">
                     <tr>
                         <td class="hatter">Szorakozás</td>
                         <td>Mozi</td>
@@ -84,40 +80,14 @@
             </nav>         
         </div>
         <div class="col-auto">
-            <canvas id="myChart"></canvas>                        
-            <script>
-                var xValues = ["Szorakozás", "Utazás"];
-                var yValues = [4500, 12500];
-                var barColors = [
-                    "#b91d47",
-                    "#00aba9",
-                    "#2b5797",
-                    "#e8c3b9",
-                    "#1e7145"
-                    ];                            
-                    new Chart("myChart", {
-                        type: "doughnut",
-                        data: {
-                            labels: xValues,
-                            datasets: [{
-                                backgroundColor: barColors,
-                                data: yValues
-                            }]
-                        },
-                        options: {
-                            title: {
-                                display: true,
-                                text: "Költségek kategóriánként"
-                            }
-                        }
-                    });
-            </script>     
+            <canvas id="myChart"></canvas>
         </div>              
     </div>    
 </div>       
 
-
+<script src="Spendor/public/js/teszt.js"></script>
 <script>
-    const expenses = <?=json_encode($expenses)?>;
-    //console.log(expenses);
-</script>
+                const expenses = <?=json_encode($expenses)?>;
+                console.log(expenses[0].megnevezes);                
+                //metodusba átadni
+</script>     
