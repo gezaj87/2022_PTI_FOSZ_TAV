@@ -16,7 +16,7 @@
         <div class="auto-col d-flex justify-content-center">
             <div class="content">
                 <form class="ujTetelek" method="POST" action="newexpense">
-                    <input type="hidden" value="<?php isset($_SESSION['token'])? $_SESSION['token'] : '' ?>">
+                    <input type="hidden" value="<?=isset($_SESSION['token'])? $_SESSION['token'] : ''?>" name="token">
                     <label class="ujTetel hatter" for="megnevezes_id">Megnevezés</label>
                     <input type="text" id="megnevezes_id" name="name" required><br>
                     <label class="ujTetel hatter">Kategória:</label>
