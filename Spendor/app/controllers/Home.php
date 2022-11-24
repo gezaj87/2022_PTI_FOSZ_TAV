@@ -12,8 +12,7 @@ class Home extends Controller
             'message' => null
         ];
 
-
-        if (isset($_SESSION['token']) && isset($_SESSION['user']))
+        if (self::Auth())
         {
             $response['user_logged_in'] = true;
 

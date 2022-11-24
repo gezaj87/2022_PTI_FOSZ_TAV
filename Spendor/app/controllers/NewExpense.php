@@ -18,7 +18,7 @@ class NewExpense extends Controller
 
         try
         {
-            if (!isset($_SESSION['token']))
+            if (!self::Auth() || !isset($_SESSION['token']) || !isset($_POST['token']) || $_POST['token'] != $_SESSION['token'])
             {
                 $respone['token'] = false;
                 throw new Exception(self::TOKEN_NOT_FOUND);
