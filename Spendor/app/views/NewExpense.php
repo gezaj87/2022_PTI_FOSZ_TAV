@@ -13,7 +13,7 @@
 
 <h3>teszt: NewExpense.php</h3>
 <form method="POST" action="newexpense">
-    <input type="hidden" value="<?php isset($_SESSION['token'])? $_SESSION['token'] : '' ?>">
+    <input type="hidden" value="<?php isset($_SESSION['token'])? $_SESSION['token'] : '' ?>" name="token">
     <p>Name: <input type="text" name="name"></p>
     <p>
         Category:
