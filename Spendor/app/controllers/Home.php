@@ -35,7 +35,8 @@ class Home extends Controller
                 $query_str = "SELECT t.megnevezes, k.nev kategorianev, t.osszeg, t.felhasznaloid, DATE(t.datum) datum ";
                 $query_str .= "FROM tetelek t ";
                 $query_str .= "INNER JOIN kategoriak k ON k.id = t.kategoriaid ";
-                $query_str .= "Where felhasznaloid = ? AND datum BETWEEN ? AND ?;";
+                $query_str .= "Where felhasznaloid = ? AND datum BETWEEN ? AND ? ";
+                $query_str .= "ORDER BY datum;";
                 $result = Database::SQL($query_str, [
                     $_SESSION['user']['id'],
                     $param['date_from'],
