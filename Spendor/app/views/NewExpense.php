@@ -11,23 +11,29 @@
     
 ?>
 
-<h3>teszt: NewExpense.php</h3>
-<form method="POST" action="newexpense">
-    <input type="hidden" value="<?=isset($_SESSION['token'])? $_SESSION['token'] : ''?>" name="token">
-    <p>Name: <input type="text" name="name"></p>
-    <p>
-        Category:
-        <select name="category_id">
-            <option value="1">Szórakozás</option>
-            <option value="2">Élelmiszer</option>
-            <option value="3">Rezsi</option>
-            <option value="4">Lakbér</option>
-        </select>
-    </p>
-    <p>Amount: <input type="number" name="amount"></p>
-    <p>
-        Date:
-        <input type="date" name="date">
-    </p>
-    <button type="submit">Save</button>
-</form>
+<div class="container-fluid">
+    <div class="row">
+        <div class="auto-col d-flex justify-content-center">
+            <div class="content">
+                <form class="ujTetelek" method="POST" action="newexpense">
+                    <input type="hidden" value="<?php isset($_SESSION['token'])? $_SESSION['token'] : '' ?>">
+                    <label class="ujTetel hatter" for="megnevezes_id">Megnevezés</label>
+                    <input type="text" id="megnevezes_id" name="name" required><br>
+                    <label class="ujTetel hatter">Kategória:</label>
+                    <select id="kategoria" name="category_id">
+                        <option disabled selected value>Kérem válasszon</option>
+                        <option value="1">Szórakozás</option>
+                        <option value="2">Élelmiszer</option>
+                    </select><br>                    
+                    <label class="ujTetel hatter" for="osszeg_id">Összeg Ft-ban</label>
+                    <input type="number" id="osszeg_id" name="amount" required><br>
+                    <label class="ujTetel hatter" for="datum_id">Dátum</label>
+                    <input type="date" id="datum_id" name="date" required><br>
+                    <input type="submit" class="rogzites" id="rogzites_id" value="Rögzítés">
+                    <input type="reset" class="alapHelyzet" id="alapHelyzet_id" value="Törlés">
+                </form>
+            </div>               
+        </div>
+    </div>  
+</div>
+
