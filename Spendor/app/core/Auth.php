@@ -2,14 +2,28 @@
 
 class Auth
 {
-    public static function Auth(bool $admin = false)
+    protected static function Auth(bool $admin = false):bool
     {
-        if (!isset($_SESSION['token']) || !isset($_SESSION['email'])) return false;
+        $user_logged_in = false;
+        $user_in_database = false;
 
-        $result = Database::SQL('select * from felhasznalok where email = ? and admin = ?', [$_SESSION['email'], $admin? 1 : 0 ]) -> fetch_assoc();
+        if (isset($_SESSION['user']['email']))
+        {
+            $user_logged_in = true;
 
-        if (!$result) return false;
+            $result = Database::SQL("SELECT f.email from felhasznalok f WHERE f.email = ? AND admin = ?", [
+                $_SESSION['user']['email'],
+                $admin? 1 : 0
+            ])->fetch_assoc();
 
-        return true;
+            if ($result)
+            {
+                $user_in_database = true;
+            }
+
+            return $user_logged_in && $user_in_database;
+        }
+
+        return false;
     }
 }

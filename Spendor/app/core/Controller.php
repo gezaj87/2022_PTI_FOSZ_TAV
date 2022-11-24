@@ -1,6 +1,6 @@
 <?php
 
-class Controller
+class Controller extends Auth
 {
 
     protected static function View($view, $data = [])

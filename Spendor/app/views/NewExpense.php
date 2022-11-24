@@ -10,6 +10,7 @@
     }
     
 ?>
+
 <div class="container-fluid">
     <div class="row">
         <div class="auto-col d-flex justify-content-center">
@@ -35,3 +36,4 @@
         </div>
     </div>  
 </div>
+
