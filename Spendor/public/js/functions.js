@@ -2,6 +2,7 @@ let table= []
 let chartName=[]
 let chartData =[]
 const colors = ["#b91d47","#00aba9","#2b5797","#e8c3b9","#1e7145","#DAF7A6","#FFC300","#FF5733","#C70039","#900C3F","#581845","#5c1dbc","#7daafb"]
+const chartText ="Költségek kategóriánként"
 
 function datas(newTable, newChart){
     makeNewTable(newTable)
@@ -18,17 +19,17 @@ let tbodyId = document.getElementById("tesztTabla")
 function makeNewTable(newTable){
 
     for (let i = 0; i< newTable.length; i++){
+        console.log("1")
         let tr = document.createElement('tr');        
-        for (let j = 0; j < 4;j++){                     
-            console.log(newTable[i].kategorianev)
-            let td = document.createElement('td')
-            for (k = 0; k< 4;k++){
-                td.innerHTML = newTable[i]
+        for (let j = 0; j < 4;j++){
+            console.log("2")
+            let td = document.createElement('td')            
+            for (k = 0; k< 2;k++){
+                console.log("3")
+                td.innerHTML = newTable[i].megnevezes
                 tr.appendChild(td)
-
             }            
-            tr.appendChild(td)
-            
+            tr.appendChild(td)            
         }
         tbodyId.appendChild(tr)
 
@@ -60,7 +61,7 @@ var barColors =colors
                         options: {
                             title: {
                                 display: true,
-                                text: "Költségek kategóriánként"
+                                text: chartText
                             }
                         }
                     });
