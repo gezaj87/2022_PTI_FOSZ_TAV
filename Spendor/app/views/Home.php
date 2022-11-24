@@ -57,13 +57,11 @@
     </div>    
 </div>       
 
-<script src="Spendor/public/js/teszt.js"></script>
+<script src="Spendor/public/js/draw.js"></script>
 <script>        
                 
-                const expenses = <?=json_encode($expenses)?>;
-                console.log(expenses);
-                const totalAmountByCategory = <?=json_encode($total_amount_by_category)?>;
-                console.log(totalAmountByCategory);
-                datas(expenses,totalAmountByCategory);
+                const expenses = <?=json_encode($expenses)?>;                
+                const totalAmountByCategory = <?=json_encode($total_amount_by_category)?>;                
+                drawChartTable(expenses,totalAmountByCategory);
 </script>
 <script src="Spendor/public/js/page.js"></script>
