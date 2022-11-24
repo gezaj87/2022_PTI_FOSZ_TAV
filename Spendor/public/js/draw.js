@@ -13,10 +13,10 @@ function drawChartTable(newTable, newChart){
 let tbodyId = document.getElementById("tetelTablaBody");
 
 function makeNewTable(newTable){
-    let tr = "<tr><td class="+"hatter"+">" + newTable[0].kategorianev + "</td>" + "<td>" + newTable[0].megnevezes + "</td>" + "<td class="+"hatter"+">" + newTable[0].osszeg + "</td>" + "<td>" + newTable[0].datum + "</td></tr>";
+    let tr = "<tr><td class="+"hatter"+">" + newTable[0].kategorianev + "</td>" + "<td>" + newTable[0].megnevezes + "</td>" + "<td class="+"hatter"+">" + newTable[0].osszeg.toLocaleString('hu-HU')  + "</td>" + "<td>" + newTable[0].datum + "</td></tr>";
 
     for (let i = 1; i< newTable.length; i++){
-            tr += "<tr><td class="+"hatter"+">" + newTable[i].kategorianev + "</td>" + "<td>" + newTable[i].megnevezes + "</td>" + "<td class="+"hatter"+">" + newTable[i].osszeg + "</td>" + "<td>" + newTable[i].datum + "</td></tr>";
+            tr += "<tr><td class="+"hatter"+">" + newTable[i].kategorianev + "</td>" + "<td>" + newTable[i].megnevezes + "</td>" + "<td class="+"hatter"+">" + newTable[i].osszeg.toLocaleString('hu-HU')  + "</td>" + "<td>" + newTable[i].datum + "</td></tr>";
         }        
         tbodyId.innerHTML = (tr);
     }
