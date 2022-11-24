@@ -4,7 +4,7 @@ let chartData =[];
 const colors = ["#b91d47","#00aba9","#2b5797","#e8c3b9","#1e7145","#DAF7A6","#FFC300","#FF5733","#C70039","#900C3F","#581845","#5c1dbc","#7daafb"];
 const chartText ="Költségek kategóriánként";
 
-function datas(newTable, newChart){
+function drawChartTable(newTable, newChart){
     makeNewTable(newTable);
     makeNewChart(newChart);
     drawChart();    
