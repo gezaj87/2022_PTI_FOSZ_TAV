@@ -67,12 +67,12 @@ a{
 }
 
 /*lapozás*/
-.pagination{
-    margin-right: 50px;
-    margin-top: 3cm;
+.pageButtons{
+    margin: 2px;
+    
 }
 /*Két dátumszűrőhőz tartozó margin*/
-.datum{
+.datumGomb{
     margin-bottom: 50px;
 }
 
@@ -98,12 +98,14 @@ input,select{
 }
 
 /*Form gomb színek*/
-.regisztracioGombok, .bejelentkezesGombok, .rogzites, .alapHelyzet, .modositasGombok, .felhasznaloModositGombok{
+.regisztracioGombok, .bejelentkezesGombok, .rogzites, .alapHelyzet, .modositasGombok, .felhasznaloModositGombok, .datumGomb{
     margin-top: 33px;
     background-color: rgb(30, 144, 255);
     color:white;
+    border-radius: 5px;
     border:1px black solid;
 }
+
 /*modosit.html megse gomb egyvonalba hozásának segítsége*/
 .tetelModositasMegseJobbra{
     
@@ -132,4 +134,35 @@ input,select{
 }
 #regisztracioMegse{
     margin-left: 70px;
+}
+/* pagination*/
+input[type="button"],input[type="submit"] {
+	transition: all .3s;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+	font-size: 15px;
+    margin-top: 33px;
+    background-color: rgb(30, 144, 255);
+    color:white;
+    border-radius: 5px;
+    border:1px black solid;
+}
+
+input[type="button"]:not(.active, .regisztracioGombok, .bejelentkezesGombok, .rogzites, .alapHelyzet, .modositasGombok, .felhasznaloModositGombok) {
+	background-color:transparent;
+}
+
+.active {
+	background-color: rgb(30, 144, 255);
+	color :#fff;
+}
+
+input[type="button"]:hover:not(.active, .regisztracioGombok, .bejelentkezesGombok, .rogzites, .alapHelyzet, .modositasGombok, .felhasznaloModositGombok) {
+	background-color: #ddd;
+}
+
+#datumSzuro{
+    margin-top: 0px;
 }

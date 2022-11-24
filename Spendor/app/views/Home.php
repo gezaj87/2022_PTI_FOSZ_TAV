@@ -29,11 +29,13 @@
         <div class="col-auto content foTablazat">
             <form>
                 <label class="datum" for="datumtol">Dátum-tól</label>
-                <input type="date" id="datumtol" value="<?=$firstDayOfMonth?>">
+                <input type="date" id="datumtol" name="dateFrom" value="<?=$firstDayOfMonth?>">
                 <label class="datum" for="datumig">Dátum-ig</label>
-                <input type="date" id="datumig" value="<?=$lastDayOfMonth?>">
+                <input type="date" id="datumig" name="dateTo" value="<?=$lastDayOfMonth?>">
+                <br>
+                <input type="submit" class="datumGomb" id="datumSzuro" value="Szűrés">
             </form>
-            <table class="table tablaTetelek">
+            <table class="table tablaTetelek" id="tetelTabla">
                 <thead>
                     <tr>
                         <th scope="col" class="hatter">Kategória</th>
@@ -42,21 +44,12 @@
                         <th scope="col">Dátum</th>
                     </tr>                                
                 </thead>
-                <tbody id="tesztTabla">
-                    
+                <tbody id="tetelTablaBody">                    
                 </tbody>
                 <tfoot>                                
                 </tfoot>                        
             </table>                                      
-            <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-            </nav>         
+            
         </div>
         <div class="col-auto">
             <canvas id="myChart"></canvas>
@@ -64,7 +57,7 @@
     </div>    
 </div>       
 
-<script src="Spendor/public/js/functions.js"></script>
+<script src="Spendor/public/js/teszt.js"></script>
 <script>        
                 
                 const expenses = <?=json_encode($expenses)?>;
@@ -72,4 +65,5 @@
                 const totalAmountByCategory = <?=json_encode($total_amount_by_category)?>;
                 console.log(totalAmountByCategory);
                 datas(expenses,totalAmountByCategory);
-</script> 
+</script>
+<script src="Spendor/public/js/page.js"></script>
