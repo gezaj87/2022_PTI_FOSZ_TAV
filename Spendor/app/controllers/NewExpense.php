@@ -7,7 +7,7 @@ class NewExpense extends Controller
 
     public static function Post()
     {
-        $respone = [
+        $response = [
             'token' => true,
             'validation_success' => true,
             'message' => '',
@@ -16,14 +16,18 @@ class NewExpense extends Controller
 
         $newExpense = null;
 
+        
+
         try
         {
+
             if (!self::Auth() || !isset($_SESSION['token']) || !isset($_POST['token']) || $_POST['token'] != $_SESSION['token'])
             {
-                $respone['token'] = false;
+                $response['token'] = false;
                 throw new Exception(self::TOKEN_NOT_FOUND);
             }
 
+            
 
             foreach (self::REQUIRED_INPUTS as $input) {
                 if (!isset($_POST[$input]))
@@ -50,14 +54,15 @@ class NewExpense extends Controller
         }
         catch(Exception $e)
         {
-            if ($respone['token'])
-            {
-                $respone['validation_success'] = false;
-            }
-            $respone['message'] = $e->getMessage();
 
-            self::Get($respone);
-            return;
+            if ($response['token'])
+            {
+                $response['validation_success'] = false;
+            }
+            $response['message'] = $e->getMessage();
+
+            self::Get($response);
+            die();
         }
 
         try 
@@ -73,18 +78,18 @@ class NewExpense extends Controller
         }
         catch(Exception $e)
         {
-            $respone['database_success'] = false;
-            $respone['message'] = $e->getMessage();
-            self::Get($respone);
-            return;
+            $response['database_success'] = false;
+            $response['message'] = $e->getMessage();
+            self::Get($response);
+            die();
         }
         
-        self::Get($respone);
+        self::Get($response);
     }
 
     public static function Get($param = null)
     {
-        if (!isset($_SESSION['token']))
+        if (!self::Auth())
             {
                 self::View('NotFound',
                 [
