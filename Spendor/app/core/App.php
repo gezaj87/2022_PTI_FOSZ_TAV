@@ -15,6 +15,7 @@ class App
 
         //útvonalak definiálása ezen sor altt
         $Router->Get('/', [Home::class, 'Start']);
+        $Router->Post('/', [Home::class, 'Filter']);
         $Router->Get('/register', [Register::class, 'Get']);
         $Router->Post('/register', [Register::class, 'Post']);
         $Router->Get('/login', [Login::class, 'Get']);

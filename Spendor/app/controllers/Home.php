@@ -9,7 +9,9 @@ class Home extends Controller
             'database' => false,
             'data_to_frontend' => null,
             'user_logged_in' => false,
-            'message' => null
+            'message' => null,
+            'date_from' => null,
+            'date_to' => null
         ];
 
         if (self::Auth())
@@ -27,6 +29,8 @@ class Home extends Controller
                 $param['date_to'] = $lastDayOfMonth;
             }
             
+            $response['date_from'] = $param['date_from'];
+            $response['date_to'] = $param['date_to'];
 
             try
             {
@@ -67,9 +71,35 @@ class Home extends Controller
                 $response['message'] = $e->getMessage();
             }
         }
+        else
+        {
+            self::View('Login');
+            die();
+        }
 
 
         self::Get($response);
+    }
+
+    public static function Filter()
+    {
+        if (
+            self::Auth() &&
+            isset($_POST['token']) && isset($_SESSION['token']) && isset($_POST['dateFrom']) && isset($_POST['dateTo']) &&
+            $_POST['token'] == $_SESSION['token']
+            )
+        {
+            $param = null;
+            $param['date_from'] = $_POST['dateFrom'];
+            $param['date_to'] = $_POST['dateTo'];
+            
+
+            self::Start($param);
+        }
+        else
+        {
+            self::Start();
+        }
     }
 
 

@@ -16,24 +16,22 @@
         echo "Nincs megjelenítendő adat!";
     }
     
-    $firstDayOfMonth = new DateTime('now');
-    $firstDayOfMonth = $firstDayOfMonth->format('Y-m').'-01';
-
-    $lastDayOfMonth = new DateTime('now');
-    $lastDayOfMonth = $lastDayOfMonth->format('Y-m-t');    
+    $date_from = $data['data']['date_from'];
+    $date_to = $data['data']['date_to'];   
 
 ?>
 
 <div class="container-fluid">
     <div class="row tablazat justify-content-center">            
         <div class="col-auto content foTablazat">
-            <form>
+            <form method="POST" action="">
+                <input type="hidden" value="<?=isset($_SESSION['token'])? $_SESSION['token'] : ''?>" name="token">
                 <label class="datum" for="datumtol">Dátum-tól</label>
-                <input type="date" id="datumtol" name="dateFrom" value="<?=$firstDayOfMonth?>">
+                <input type="date" id="datumtol" name="dateFrom" value="<?=$date_from?>">
                 <label class="datum" for="datumig">Dátum-ig</label>
-                <input type="date" id="datumig" name="dateTo" value="<?=$lastDayOfMonth?>">
+                <input type="date" id="datumig" name="dateTo" value="<?=$date_to?>">
                 <br>
-                <input type="submit" class="datumGomb" id="datumSzuro" value="Szűrés">
+                <button type="submit" class="datumGomb" id="datumSzuro">Szűrés</button>
             </form>
             <table class="table tablaTetelek" id="tetelTabla">
                 <thead>
@@ -60,8 +58,9 @@
 <script src="Spendor/public/js/draw.js"></script>
 <script>        
                 
-                const expenses = <?=json_encode($expenses)?>;                
-                const totalAmountByCategory = <?=json_encode($total_amount_by_category)?>;                
-                drawChartTable(expenses,totalAmountByCategory);
+    const expenses = <?=json_encode($expenses)?>;                
+    const totalAmountByCategory = <?=json_encode($total_amount_by_category)?>;                
+    drawChartTable(expenses,totalAmountByCategory);
+
 </script>
 <script src="Spendor/public/js/page.js"></script>
