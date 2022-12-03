@@ -32,6 +32,6 @@
 
 ###  4
 - **Rövid leírás**:  Üres táblázat Üzenet kiírása
-- **Elvárt működés**: Ha a táblázat üres, akkor jelezze ezt a felhasználónak. Előfordulás: Adott időszaknak a leszűrésénél nincs adat. Új felhasználóról van szó és még nem töltött fel adatokat. A felhasználó kitörölte az eddig rögzített adatait.
+- **Elvárt működés**: Ha a táblázat üres, akkor jelezze ezt a felhasználónak. Előfordulás: Adott időszaknak a leszűrésénél nincs adat. A felhasználó még nem rögzített tételt, vagy kitörölte azokat.
 - **Jelenlegi működés**: Az elvárt működésnek megfelelően.
 - **Megfelelősségi státusz**: Megfelelt
