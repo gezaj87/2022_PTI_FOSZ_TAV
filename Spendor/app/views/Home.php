@@ -55,7 +55,7 @@
     </div>    
 </div>       
 
-<script src="Spendor/public/js/draw.js"></script>
+<script src="Spendor/public/js/drawing.js"></script>
 <script>        
                 
     const expenses = <?=json_encode($expenses)?>;                
