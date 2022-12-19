@@ -6,8 +6,9 @@
 |ID| Megnevezés | Tesztelő neve | Funkció leírása | Elvárt eredmény | Eredmény | Megfelelősségi státusz | Javítva
 |-------| --------------| ------------|------------------------|------------|---------------|---------------|----|
 |[1](#1)| GET "/"|Jóni Géza|Home kontroller Start metódus indul | Metódus lefut|siker |Megfelelt	||
-|[2](#2)| GET "/newexpense"|Jóni Géza|newExpense kontroller Get metódus indul | Metódus lefut|siker |Megfelelt	||
-|[3](#3)| POST "/newexpense"|Jóni Géza|newExpense kontroller Post metódus indul | Metódus lefut|siker |Megfelelt	||
+|[2](#2)| GET "/newexpense"|Jóni Géza|NewExpense kontroller Get metódus indul | Metódus lefut|siker |Megfelelt	||
+|[3](#3)| POST "/newexpense"|Jóni Géza|NewExpense kontroller Post metódus indul | Metódus lefut|siker |Megfelelt	||
+|[4](#4)| POST "/"|Jóni Géza|Home kontroller Filter metódus lefut | Metódus lefut|siker |Megfelelt	||
 
 
 ###  1
@@ -29,5 +30,12 @@ Ha a felhasználó nincs bejelentkezve, akkor a \Spendor\app\views\NotFound.php 
 - **Rövid leírás**:  POST kérés "/newexpense" böngészővel
 - **Elvárt működés**: 
 http://127.0.0.1/2022_PTI_FOSZ_TAV/newexpense cimen böngészőben kitöltöm az adatlapot és gombra kattintva elküldöm a szervernek kiértékelésre. A szerver megkapja az inputokat és elvégzni a validációt, kiértékelést és rögzítést az adatbázisban. A végén meghívja a Get metódust.
+- **Jelenlegi működés**: Az elvárt működésnek megfelelően.
+- **Megfelelősségi státusz**: Megfelelt
+
+###  4
+- **Rövid leírás**:  POST kérés "/" böngészővel
+- **Elvárt működés**: 
+http://127.0.0.1/2022_PTI_FOSZ_TAV/ cimen bejelentkezés után a feltöltött kiadások szűrése dátum paraméterek megadásával. A Filter metódus fog elsőnek elindulni, mely paramétereket ad át a Start metódus számára. A Start metódus a paramétereknek megfelelően leszűri a kiadásokat és eljuttatja a Frontend számára.
 - **Jelenlegi működés**: Az elvárt működésnek megfelelően.
 - **Megfelelősségi státusz**: Megfelelt
