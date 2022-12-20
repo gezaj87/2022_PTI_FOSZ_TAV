@@ -64,3 +64,27 @@
 
 </script>
 <script src="Spendor/public/js/page.js"></script>
+
+
+<script src="Spendor/public/js/deleteExpense.js"></script>
+<script>
+    const deleteExpense = new DeleteExpense('<?=$_SESSION['token']?>');
+
+    
+    const deleteResponse = async (id) => {
+        const response = await deleteExpense.Response(id);
+        // console.log(response);
+    }
+
+    //
+    // deleteResponse: tétel törlésére szolgáló függvény, paraméterben meg kell adni a törlendő tétel ID-ját.
+    // a függvényben deklarált "response" változó tartalmazza a szerver válaszát a kérésről json formátumban.
+    // A függvény törzsében kell megírni a frontend kódot.
+    // függvényhívás példa: deleteResponse(15);
+    //
+
+    
+
+    
+    
+</script>

@@ -23,6 +23,7 @@ class App
         $Router->Post('/logout', [Logout::class, 'Post']);
         $Router->Get('/newexpense', [NewExpense::class, 'Get']);
         $Router->Post('/newexpense', [NewExpense::class, 'Post']);
+        $Router->Delete('/deleteexpense', [DeleteExpense::class, 'Delete']);
 
         if (!isset($_SESSION['router']) || !$_SESSION['router'])
         {
