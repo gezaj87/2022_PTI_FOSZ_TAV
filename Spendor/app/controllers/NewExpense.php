@@ -2,7 +2,7 @@
 
 class NewExpense extends Controller
 {
-    private const REQUIRED_INPUTS = ['name', 'category_id', 'amount', 'date'];
+    public const REQUIRED_INPUTS = ['name', 'category_id', 'amount', 'date'];
     public const TOKEN_NOT_FOUND = "Nincs bejelentkezve!";
 
     public static function Post()

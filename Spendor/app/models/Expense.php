@@ -11,7 +11,7 @@ class Expense
 
     private const INVALID_NAME = "A megnevezés 1 és 30 karakter között lehet!";
     private const NOT_POSITIVE_INTEGER = "A megadott érték nem pozitív egész szám!";
-    private const NOT_VALID_DATE = "A megadott dátum nem valós!";
+    public const NOT_VALID_DATE = "A megadott dátum nem valós!";
 
 
     public function __construct(string $name, int $category_id, int $amount, int $user_id, DateTime $date, $id = null)
@@ -37,6 +37,7 @@ class Expense
         
         if (self::DateCheck($date)) $this->date = $date;
         else throw new Exception(self::NOT_VALID_DATE);
+        
     }
 
     public function getId(): int

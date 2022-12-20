@@ -24,6 +24,7 @@ class App
         $Router->Get('/newexpense', [NewExpense::class, 'Get']);
         $Router->Post('/newexpense', [NewExpense::class, 'Post']);
         $Router->Delete('/deleteexpense', [DeleteExpense::class, 'Delete']);
+        $Router->Put('/modifyexpense', [ModifyExpense::class, 'Modify']);
 
         if (!isset($_SESSION['router']) || !$_SESSION['router'])
         {

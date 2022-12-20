@@ -2,7 +2,7 @@
 
 class DeleteExpense extends Controller
 {
-    private const ID_MISSING = 'Nincs ID megadva!';
+    public const ID_MISSING = 'Nincs ID megadva!';
     private const ID_NOT_FOUND = "Az ID nem található!";
 
     Public static function Delete()

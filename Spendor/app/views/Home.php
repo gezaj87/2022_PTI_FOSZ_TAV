@@ -67,10 +67,10 @@
 
 
 <script src="Spendor/public/js/deleteExpense.js"></script>
+<script src="Spendor/public/js/modifyExpense.js"></script>
 <script>
     const deleteExpense = new DeleteExpense('<?=$_SESSION['token']?>');
 
-    
     const deleteResponse = async (id) => {
         const response = await deleteExpense.Response(id);
         // console.log(response);
@@ -84,6 +84,19 @@
     //
 
     
+    
+    const modifyExpense = new ModifyExpense('<?=$_SESSION['token']?>');
+
+    const modifyResponse = async (id, name, category_id, amount, date) => {
+        const response = await modifyExpense.Response(id, name, category_id, amount, date);
+        // console.log(response);
+    }
+
+    // 
+    //modifyExpense: lásd deleteResponse
+    //tételek módosítására szolgáló függvény. Paraméterei: id, name, category_id, amount, date
+    //példa: modifyResponse(10, "Palacsinta", 1, 3, "2022-12-20");
+    //
 
     
     
