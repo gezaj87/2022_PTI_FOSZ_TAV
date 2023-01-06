@@ -131,7 +131,7 @@ Autómatikusan generált statisztikai adatok megtekintése a felhasználók vona
 ##
 ###### Új tétel
 ![UjTetel](PNG/kepoernyoterv_ujtetel.png)
-
+##
 ## 11. Forgatókönyvek
 ### 11.1 Felhasználó
 #### 11.1.1 Regisztráció
