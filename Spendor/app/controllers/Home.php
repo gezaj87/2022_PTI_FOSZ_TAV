@@ -36,7 +36,7 @@ class Home extends Controller
             {
                 // $query_str = "select id, megnevezes, kategoriaid, osszeg, felhasznaloid, date(datum) datum from tetelek where felhasznaloid = ? and datum between ? and ?";
 
-                $query_str = "SELECT t.megnevezes, k.nev kategorianev, t.osszeg, t.felhasznaloid, DATE(t.datum) datum ";
+                $query_str = "SELECT t.megnevezes, k.nev kategorianev, t.osszeg, t.felhasznaloid, DATE(t.datum) datum, t.id ";
                 $query_str .= "FROM tetelek t ";
                 $query_str .= "INNER JOIN kategoriak k ON k.id = t.kategoriaid ";
                 $query_str .= "Where felhasznaloid = ? AND datum BETWEEN ? AND ? ";
