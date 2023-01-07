@@ -16,10 +16,10 @@ let canvas = document.getElementById("myChart");
 
 function makeNewTable(newTable){
     try{                   
-        let tr = "<tr data-toggle="+"modal"+" data-target="+"#orderModal"+" scope="+"row"+">"+"<td class="+"hatter"+">" + newTable[0].kategorianev + "</td>" + "<td>" + newTable[0].megnevezes + "</td>" + "<td class="+"hatter"+">" + newTable[0].osszeg.toLocaleString('hu-HU')  + "</td>" + "<td>" + newTable[0].datum + "</td><td><button type="+"button"+ " class="+"btn-primary"+" data-bs-toggle="+"modal"+" data-bs-target="+"#exampleModal"+">Launch demo modal</button></tr>";
+        let tr = "<tr scope="+"row"+">"+"<td class="+"hatter"+">" + newTable[0].kategorianev + "</td>" + "<td>" + newTable[0].megnevezes + "</td>" + "<td class="+"hatter"+">" + newTable[0].osszeg.toLocaleString('hu-HU')  + "</td>" + "<td>" + newTable[0].datum + "</td><td><button type="+"button"+ " class="+"btn-primary"+" data-bs-toggle="+"modal"+" data-bs-target="+"#exampleModal"+">Launch demo modal</button></tr>";
 
     for (let i = 1; i< newTable.length; i++){
-            tr += "<tr data-toggle="+"modal"+" data-target="+"#orderModal"+" scope="+"row"+">"+"<td class="+"hatter"+">" + newTable[i].kategorianev + "</td>" + "<td>" + newTable[i].megnevezes + "</td>" + "<td class="+"hatter"+">" + newTable[i].osszeg.toLocaleString('hu-HU')  + "</td>" + "<td>" + newTable[i].datum + "</td></tr>";
+            tr += "<tr scope="+"row"+">"+"<td class="+"hatter"+">" + newTable[i].kategorianev + "</td>" + "<td>" + newTable[i].megnevezes + "</td>" + "<td class="+"hatter"+">" + newTable[i].osszeg.toLocaleString('hu-HU')  + "</td>" + "<td>" + newTable[i].datum + "</td></tr>";
         }        
         tbodyId.innerHTML = (tr);
     }
@@ -35,6 +35,7 @@ function makeNewChart(newChart){
         chartData.push(newChart[i].osszesen);
     }    
 }
+
 
 function drawChart(){
         
