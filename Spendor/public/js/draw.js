@@ -14,40 +14,32 @@ function drawChartTable(newTable, newChart){
 let tbodyId = document.getElementById("tetelTablaBody");
 let canvas = document.getElementById("myChart");
 
-//function makeNewTable(newTable){    
-//    try{
-//        let tr = "";
-//
-//    for (let i = 0; i< newTable.length; i++){
-//            tr += `<tr class="data-toggle="modal" data-target="#exampleModal" onclick="console.log(${newTable[i].id})"><td class="hatter"> ${newTable[i].kategorianev}</td><td>${newTable[i].megnevezes}</td><td class="hatter"> ${newTable[i].osszeg.toLocaleString('hu-HU')}</td><td>${newTable[i].datum}</td></tr>`;
-//        }        
-//        tbodyId.innerHTML = (tr);
-//    }
-//    catch{
-//        tbodyId.innerHTML = err;       
-//    }    
-//}
-
 let myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {});
-
-
 
 function makeNewTable(newTable){    
     try{
         let tr = "";
 
     for (let i = 0; i< newTable.length; i++){
-            tr += `<tr class="data-toggle="modal" data-target="#exampleModal" onclick="showModal()"><td class="hatter"> ${newTable[i].kategorianev}</td><td>${newTable[i].megnevezes}</td><td class="hatter"> ${newTable[i].osszeg.toLocaleString('hu-HU')}</td><td>${newTable[i].datum}</td></tr>`;
+            tr += `<tr onclick="ModalExpense(${newTable[i].id})"><td class="hatter"> ${newTable[i].kategorianev}</td><td>${newTable[i].megnevezes}</td><td class="hatter"> ${newTable[i].osszeg.toLocaleString('hu-HU')}</td><td>${newTable[i].datum}</td></tr>`;
         }        
         tbodyId.innerHTML = (tr);
     }
     catch{
-        tbodyId.innerHTML = err;       
+        tbodyId.innerHTML = err;
     }    
 }
 
-function showModal(){
+function ModalExpense(id)
+{
     myModal.show();
+    let data = expenses.filter((e) => {
+        if (e.id === id)
+        {
+            return e;
+        }
+    })
+    console.log(data);
 }
 
 function makeNewChart(newChart){
