@@ -37,3 +37,4 @@ function pageButtons($pCount,$cur) {
 	$buttons += "<input type='button' class='pageButtons' value='Következő >>' onclick='sort("+($cur + 1)+")' "+$nextDis+">";
 	return $buttons;
 }
+
