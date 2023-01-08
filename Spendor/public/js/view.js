@@ -70,10 +70,16 @@ expenseModifyButton.addEventListener('click',function(){
     let name = document.getElementById("modal_megnevezes_id").value;
     let category_id = document.getElementById("modal_kategoria_id").value;
     let amount = document.getElementById("modal_osszeg_id").value;
-    let date = document.getElementById("modal_datum_id").value;
-    modifyResponse(idModal,name,category_id,amount,date);
-    alert("Sikeres módosítás");
-    location.reload();
+    let date = document.getElementById("modal_datum_id").value;    
+    if(name.length === 0 || category_id.length === 0 || amount.length === 0 || date.length === 0)
+    {
+        alert("Nincs minden mező kitöltve");
+    }
+    else{
+        modifyResponse(idModal,name,category_id,amount,date);
+        alert("Sikeres módosítás");
+        location.reload();
+    }
 })
 
 

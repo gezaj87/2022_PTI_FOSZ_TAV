@@ -88,7 +88,7 @@
   </div>
 </div>
 
-<script src="Spendor/public/js/dra.js"></script>
+<script src="Spendor/public/js/view.js"></script>
 <script>        
     
     const expenses = <?=json_encode($expenses)?>;                
