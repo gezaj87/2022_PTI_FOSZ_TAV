@@ -29,16 +29,13 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                        <a class="nav-link tetelRogzites hatter" onclick="location.href=location.href.split('/').slice(0, 4).join('/');">Főoldal</a>
+                        <a class="nav-link tetelRogzites" onclick="location.href=location.href.split('/').slice(0, 4).join('/');">Főoldal</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tetelRogzites" href="newexpense" >Új tétel hozzáadása</a>
-                        </li>
+                            <a class="nav-link tetelRogzites hatter" href="newexpense" >Új tétel hozzáadása</a>
+                        </li>                        
                         <li class="nav-item">
-                            <a class="nav-link megtekintes hatter" href="tetelek.html" >Tételek megtekintése</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link profil " href="profil.html" >Profil megtekintése</a>
+                            <a class="nav-link profil" >Profil megtekintése</a>
                         </li>       
                         <li class="nav-item">
                             <a class="nav-link kijelentkezes hatter" id="logout_click">Kijelentkezés</a>

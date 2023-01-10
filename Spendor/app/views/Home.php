@@ -69,9 +69,13 @@
                     <input type="text" id="modal_megnevezes_id" name="name" required><br>
                     <label class="ujTetel hatter">Kategória:</label>
                     <select id="modal_kategoria_id" name="category_id">
-                        <option disabled selected value>Kérem válasszon</option>
+                        
                         <option value="1">Szórakozás</option>
                         <option value="2">Élelmiszer</option>
+                        <option value="3">Rezsi</option>
+                        <option value="4">Bevásárlás</option>
+                        <option value="5">Utazás</option>
+                        <option value="6">Havidíjak</option>
                     </select><br>                    
                     <label class="ujTetel hatter" for="modal_osszeg_id">Összeg Ft-ban</label>
                     <input type="number" id="modal_osszeg_id" name="amount" required><br>
