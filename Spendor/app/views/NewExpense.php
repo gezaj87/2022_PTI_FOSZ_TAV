@@ -24,6 +24,10 @@
                         <option disabled selected value>Kérem válasszon</option>
                         <option value="1">Szórakozás</option>
                         <option value="2">Élelmiszer</option>
+                        <option value="3">Rezsi</option>
+                        <option value="4">Bevásárlás</option>
+                        <option value="5">Utazás</option>
+                        <option value="6">Havidíjak</option>
                     </select><br>                    
                     <label class="ujTetel hatter" for="osszeg_id">Összeg Ft-ban</label>
                     <input type="number" id="osszeg_id" name="amount" required><br>

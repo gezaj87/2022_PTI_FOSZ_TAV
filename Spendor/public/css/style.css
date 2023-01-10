@@ -28,7 +28,7 @@ header{
 }
 
 /*Hover effekt a navbarban, módosítás, törlés*/
-.megtekintes:hover, .kijelentkezes:hover, .tetelRogzites:hover, .modositas:hover, .torles:hover, .profil:hover, .kepFoOldal:hover{
+.megtekintes:hover, .kijelentkezes:hover, .tetelRogzites:hover, .modositas:hover, .torles:hover, .kepFoOldal:hover{
     cursor:pointer;
 }
 /*Betűméret változtatása*/
@@ -168,7 +168,10 @@ input[type="button"]:hover:not(.active, .regisztracioGombok, .bejelentkezesGombo
     margin-top: 0px;
 }
 
-.modalDel{    
-    color: red !important;
-    opacity: .2;
+.profil{
+    color: #ddd;
+}
+
+.profil:hover{    
+    cursor: not-allowed !important;     
 }

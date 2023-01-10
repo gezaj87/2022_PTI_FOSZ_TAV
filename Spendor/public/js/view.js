@@ -54,8 +54,6 @@ function ModalDatas(data){
     document.getElementById("modal_kategoria_id").value = data[0].kategorianev;
     document.getElementById("modal_osszeg_id").value = data[0].osszeg;
     document.getElementById("modal_datum_id").value = data[0].datum;
-    //expenseDeleteButton.addEventListener('click',deleteResponse(data[0].id));
-    //expenseModifyButton.addEventListener('click',modifyResponse(data[0].id,name,category_id,amount,date));
 }
 
 expenseDeleteButton.addEventListener('click',function()
