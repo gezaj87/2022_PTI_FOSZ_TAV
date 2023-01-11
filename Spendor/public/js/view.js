@@ -49,9 +49,10 @@ function ModalExpense(id)
     
 }
 
-function ModalDatas(data){   
+function ModalDatas(data){
+    
     document.getElementById("modal_megnevezes_id").value = data[0].megnevezes;
-    document.getElementById("modal_kategoria_id").value = data[0].kategorianev;
+    document.getElementById("modal_kategoria_id").selectedIndex = data[0].kategoriaid-1;
     document.getElementById("modal_osszeg_id").value = data[0].osszeg;
     document.getElementById("modal_datum_id").value = data[0].datum;
 }
