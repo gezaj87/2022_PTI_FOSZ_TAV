@@ -9,6 +9,7 @@
 |[2](#2)| GET "/newexpense"|Jóni Géza|NewExpense kontroller Get metódus indul | Metódus lefut|siker |Megfelelt	||
 |[3](#3)| POST "/newexpense"|Jóni Géza|NewExpense kontroller Post metódus indul | Metódus lefut|siker |Megfelelt	||
 |[4](#4)| POST "/"|Jóni Géza|Home kontroller Filter metódus lefut | Metódus lefut|siker |Megfelelt	||
+|[5](#5)| GET "/register"|Jóni Géza|Register kontroller Get metódus lefut | Metódus lefut|siker |Megfelelt	||
 
 
 ###  1
@@ -37,5 +38,12 @@ http://127.0.0.1/2022_PTI_FOSZ_TAV/newexpense cimen böngészőben kitöltöm az
 - **Rövid leírás**:  POST kérés "/" böngészővel
 - **Elvárt működés**: 
 http://127.0.0.1/2022_PTI_FOSZ_TAV/ cimen bejelentkezés után a feltöltött kiadások szűrése dátum paraméterek megadásával. A Filter metódus fog elsőnek elindulni, mely paramétereket ad át a Start metódus számára. A Start metódus a paramétereknek megfelelően leszűri a kiadásokat és eljuttatja a Frontend számára.
+- **Jelenlegi működés**: Az elvárt működésnek megfelelően.
+- **Megfelelősségi státusz**: Megfelelt
+
+###  5
+- **Rövid leírás**:  GET kérés "/register" böngészővel
+- **Elvárt működés**: 
+http://127.0.0.1/2022_PTI_FOSZ_TAV/register cím beírása után lefut a Register kontroller osztály Get metódusa, mely megjeleníti a regisztrációs oldalt.
 - **Jelenlegi működés**: Az elvárt működésnek megfelelően.
 - **Megfelelősségi státusz**: Megfelelt
