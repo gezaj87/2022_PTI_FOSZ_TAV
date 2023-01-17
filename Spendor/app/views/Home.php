@@ -1,5 +1,3 @@
-<p><b>Home.php</b></p>
-
 <?php
     if (!$data['data']['database'])
     {
